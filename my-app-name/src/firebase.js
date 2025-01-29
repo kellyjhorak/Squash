@@ -3,6 +3,11 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+//import the function from the realtime database module
+import { getDatabase } from 'firebase/database';
+// Get a reference to the database service
+const db = getDatabase();
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDSpEDImVxQ1g6YUy8U60WqxjiW8FDOlvY",
