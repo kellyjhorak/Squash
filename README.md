@@ -16,6 +16,7 @@ How might we utilize water quality data to educate and inspire Washington reside
 - Sophia Mangrubang
 - Kelly Horak
 ## Developer Information
+Built with:
 - React JS
 - Node.js
 - Express.js
