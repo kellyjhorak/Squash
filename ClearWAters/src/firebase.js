@@ -3,15 +3,11 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-//import the function from the realtime database module
-import { getDatabase } from 'firebase/database';
-// Get a reference to the database service
-const db = getDatabase();
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDSpEDImVxQ1g6YUy8U60WqxjiW8FDOlvY",
   authDomain: "clearwaters-1507b.firebaseapp.com",
+  databaseURL: "https://clearwaters-1507b-default-rtdb.firebaseio.com",
   projectId: "clearwaters-1507b",
   storageBucket: "clearwaters-1507b.firebasestorage.app",
   messagingSenderId: "533013616938",
@@ -20,4 +16,3 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export default app;
