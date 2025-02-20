@@ -1,13 +1,15 @@
-import React from 'react'
-import { Link } from "react-router-dom"
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // Ensure correct imports
 import Navbar from './navbar';
+import Homepage from './Homepage';  // Import Homepage
 
 const App = () => {
   return (
-    <>
-      <div>App update</div>
-      <Navbar />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />  
+      </Routes>
+    </Router>
   );
 };
 
