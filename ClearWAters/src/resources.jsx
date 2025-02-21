@@ -1,11 +1,14 @@
 // resources.jsx
 import React from 'react';
+import Navbar from './navbar';
+import Footer from './Footer';
 
 const Resources = () => {
   return (
     <div>
-      {/* Resources component code */}
-    </div>
+        <Navbar />
+        <Footer />
+    </div>  
   );
 };
 

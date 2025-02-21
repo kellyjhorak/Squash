@@ -1,11 +1,16 @@
 // map.jsx
 import React from 'react';
+import Navbar from './navbar';
+import Footer from './Footer';
 
 const Map = () => {
   return (
+
     <div>
-      {/* Map component code */}
+        <Navbar />
+        <Footer />
     </div>
+    
   );
 };
 
