@@ -13,7 +13,7 @@ export default function Navbar() {
           <ul> {/* Wrap the list items in a <ul> */}
             <li id='logo'>
               <Link to="/homepage" aria-label="Go to homepage">
-                <img src="img/logo.png" alt="Logo" />
+                <img src="images/example_logo.png" alt="Logo" />
               </Link>
             </li>
             <li id='home-link'>
