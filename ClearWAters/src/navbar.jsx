@@ -23,7 +23,7 @@ export default function Navbar() {
               <Link to="/map" aria-label="Map">Map</Link>
             </li>
             <li id='resources-link'>
-              <Link to="/resources" aria-label="Resources">Leaderboard</Link>
+              <Link to="/resources" aria-label="Resources">Resources</Link>
             </li>
           </ul>
         </nav>
