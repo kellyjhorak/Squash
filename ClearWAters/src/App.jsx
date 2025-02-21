@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // Ensure correct imports
 import Navbar from './navbar';
-import Homepage from './Homepage';  // Import Homepage
+import Homepage from './homepage';  // Import Homepage
 
 const App = () => {
   return (

@@ -8,10 +8,10 @@ import { Link } from "react-router-dom"
 export default function Navbar() {
     return (
         <header>
-            <li>testing</li>
-            {/* 
-                <li id='logo'>
+            <nav>
+            <li id='logo'>
                         <Link to="/homepage" aria-label="Go to homepage">
+                            <img src="img/logo.png" alt="Logo" />
                         </Link>
                 </li>
                 <li id='home-link'>
@@ -25,14 +25,7 @@ export default function Navbar() {
                         <Link to="/resources" aria-label="Resources">Leaderboard</Link>
                  </li>
              <img src="img/logo.png" alt="Home" />
-            */} 
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/" aria-label="Home">Home</Link>
-                    </li>
-                </ul>
-            </nav>
+            </nav>       
         </header>
     );
 }
