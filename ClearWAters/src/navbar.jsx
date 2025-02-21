@@ -14,7 +14,7 @@ export default function Navbar() {
           <ul> {/* Wrap the listt items in a <ul> */}
             <li id='logo'>
               <Link to="/homepage" aria-label="Go to homepage">
-              <img src={exampleLogo} alt="Logo" style={{ width: '20px', height: '30px' }} />
+              <img src={exampleLogo} alt="Logo" style={{ width: '50px', height: '60px' }} />
               </Link>
             </li>
             <li id='home-link'>
