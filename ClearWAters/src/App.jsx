@@ -4,13 +4,9 @@ import Homepage from './homepage';  // Import Homepage
 import Map from './Map';
 import Resources from './resources';
 
-
-
 {/*
   
 */}
-
-
 
 const App = () => {
   return (
