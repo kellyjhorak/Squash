@@ -3,7 +3,7 @@ import App from './App';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './styling.css';
-import exampleLogo from './images/example_logo.png';
+import exampleLogo from './images/logo_large.png';
 
 import { Link } from "react-router-dom"
 
@@ -14,7 +14,7 @@ export default function Navbar() {
           <ul> {/* Wrap the listt items in a <ul> */}
             <li id='logo'>
               <Link to="/homepage" aria-label="Go to homepage">
-              <img src={exampleLogo} alt="Logo" style={{ width: '50px', height: '60px' }} />
+              <img src={exampleLogo} alt="Logo" />
               </Link>
             </li>
             <li id='home-link'>

@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -10,7 +11,12 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  width: '250px';
+  height: '60px';
+  padding-left:'20px'; 
+  padding-right:'150px';
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -46,24 +52,26 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #FCF0CC;
+  background-color: #f7eed2;
   z-index: 1000;
   height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   margin: 0;
-  padding: 0;
   height: 100%;
 }
 
 nav ul li a {
+ justify-content: left;
   text-decoration: none;
-  color: #020887;
+  color: #01638a;
   font-size: 1.5em;
   font-weight: bold;
   padding: 15px 20px;
@@ -74,8 +82,8 @@ nav ul li a:hover {
 }
 
 footer {
-  background-color: #FCF0CC;
-  color: #020887;
+  background-color: #f7eed2;
+  color: #01638a;
   text-align: center; 
   padding: 0;
   position: fixed;
