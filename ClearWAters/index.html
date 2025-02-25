@@ -1,13 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PFAS Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            margin: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .input-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        .no-results {
+            text-align: center;
+            margin-top: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PFAS Contamination Data</h1>
+</header>
+
+<main>
+    <div class="container">
+        <div class="input-section">
+            <input type="text" id="county-input" placeholder="Enter County Name">
+            <button onclick="getCountyData()">GO</button>
+        </div>
+
+        <div id="data-section"></div>
+    </div>
+</main>
+
+<script>
+    const data = [
+        { county_name: "King", measurement_date: "3/15/2022", pfas_level: 14.32, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Cedar River", recommended_filter: "Activated Carbon", comments: "PFOS levels slightly elevated; filtration recommended." },
+        { county_name: "Kitsap", measurement_date: "11/7/2023", pfas_level: 15.32, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Puget Sound", recommended_filter: "Activated Carbon", comments: "Detected at concerning levels; filtration strongly recommended." },
+        { county_name: "Pierce", measurement_date: "7/11/2023", pfas_level: 14.85, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Puyallup River", recommended_filter: "Activated Carbon", comments: "Detected at concerning levels; filtration is strongly recommended." },
+        { county_name: "Spokane", measurement_date: "4/8/2024", pfas_level: 42.1, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Spokane River", recommended_filter: "Activated Carbon", comments: "High levels detected; filtration is strongly recommended." },
+        { county_name: "Yakima", measurement_date: "4/8/2024", pfas_level: 45.2, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Yakima River", recommended_filter: "Activated Carbon", comments: "High PFOS levels; filtration strongly recommended." }
+    ];
+
+    function getCountyData() {
+        const countyInput = document.getElementById("county-input").value.trim().toLowerCase();
+        const dataSection = document.getElementById("data-section");
+
+        const filteredData = data.filter(item => item.county_name.toLowerCase().includes(countyInput));
+
+        if (filteredData.length === 0) {
+            dataSection.innerHTML = `<p class="no-results">No data found for "${countyInput}"</p>`;
+        } else {
+
+            let tableHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>County</th>
+                            <th>Measurement Date</th>
+                            <th>PFAS Compound</th>
+                            <th>Water Source</th>
+                            <th>PFAS Level</th>
+                            <th>Recommended Filter</th>
+                            <th>Comments</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            filteredData.forEach(item => {
+                tableHTML += `
+                    <tr>
+                        <td>${item.county_name}</td>
+                        <td>${item.measurement_date}</td>
+                        <td>${item.pfas_compound}</td>
+                        <td>${item.water_source}</td>
+                        <td>${item.pfas_level}</td>
+                        <td>${item.recommended_filter}</td>
+                        <td>${item.comments}</td>
+                    </tr>
+                `;
+            });
+
+            tableHTML += `</tbody></table>`;
+
+            dataSection.innerHTML = tableHTML;
+        }
+    }
+</script>
+
+</body>
 </html>
