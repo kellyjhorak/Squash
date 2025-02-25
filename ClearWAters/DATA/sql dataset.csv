@@ -1,0 +1,126 @@
+county_name,measurement_date,pfas_level,pfas_compound,water_source,recommended_filter,comments
+King,3/15/2022,14.32,(PFOS) PFoctane sulfonic acid,Cedar River,Activated Carbon,PFOS levels slightly elevated; filtration recommended.
+King,3/15/2022,9.87,(PFOA) PFoctanoic acid,Groundwater Wells,Reverse Osmosis,PFOA is persistent in the environment; RO is suggested.
+King,3/15/2022,4.12,(PFNA) PFnonanoic acid,Municipal Water,Granular Activated Carbon,"Detected in low levels, but still advisable to filter."
+King,3/15/2022,5.78,(PFHxS) PFhexane sulfonic acid,Surface Water,Ion Exchange Resin,Can accumulate in the body over time; filtration is necessary.
+King,3/15/2022,2.95,(PFBS) PFbutane sulfonic acid,Lake Washington,Activated Carbon,Short-chain PFAS; lower risk but filtration is still advised.
+King,3/15/2022,6.34,(PFUnA) PFundecanoic acid,Private Wells,Reverse Osmosis,Highly persistent PFAS; RO is the best removal method.
+King,3/15/2022,3.27,(PFPeS) PFpentanesulfonic acid,Groundwater,Ion Exchange Resin,Limited research available; precautionary filtration suggested.
+King,3/15/2022,8.21,(PFPeA) PFpentanoic acid,Seattle Water Supply,Activated Carbon,Detected at moderate levels; filtration helps reduce exposure.
+King,3/15/2022,1.82,(PFMPA) PF-3-methoxypropanoic acid,Irrigation Canals,Reverse Osmosis,Emerging PFAS compound; filtration is recommended.
+King,3/15/2022,6.92,(PFMBA) PF-4-methoxybutanoic acid,Surface Water,Granular Activated Carbon,Could bioaccumulate; removal is advised.
+King,3/15/2022,3.64,(PFHxA) PFhexanoic acid,King County Municipal Supply,Reverse Osmosis,PFHxA is persistent; best removed through RO.
+King,3/15/2022,7.55,(PFHpS) PFheptanesulfonic acid,Private Wells,Activated Carbon,Moderate presence; activated carbon helps reduce risk.
+King,3/15/2022,5.11,(PFHpA) PFheptanoic acid,Irrigation Sources,Reverse Osmosis,May persist in water; recommended to filter.
+King,3/15/2022,9.28,(PFEESA) PF(2-ethoxyethane)sulfonic acid,Groundwater,Ion Exchange,Lack of research; precautionary filtration suggested.
+King,3/15/2022,4.89,(PFDoA) PFdodecanoic acid,Surface Water,Reverse Osmosis,"Long-chain PFAS, very persistent, avoid exposure."
+King,3/15/2022,3.47,(PFDA) PFdecanoic acid,Cedar River,Granular Activated Carbon,"Detected at significant levels, removal is advised."
+King,3/15/2022,2.73,(PFBA) PFbutanoic acid,Municipal Water,Activated Carbon,Short-chain PFAS but should still be filtered.
+King,3/15/2022,10.12,(NFDHA) NonaF-dioxaheptanoic acid,Wells and Groundwater,Reverse Osmosis,Unknown long-term effects; filtration is recommended.
+King,3/15/2022,5.99,(HFPO-DA) Hexafluoropropylene oxide,King County Water System,Ion Exchange,Linked to potential health risks; should be filtered.
+King,3/15/2022,3.78,"(ADONA) 4,8-Dioxa-3H-perfluorononan",Lake and Rivers,Granular Activated Carbon,Emerging contaminant; filtration recommended.
+King,3/15/2022,6.44,(9CI-PF3ONS) 9-Chlorohexadecafluor,Cedar River,Reverse Osmosis,"Persistent chemical, best removed with RO."
+King,3/15/2022,7.82,(8:2FTS) H-PFdecane sulfonic acid,Groundwater,Activated Carbon,Moderate risk; reduce exposure where possible.
+King,3/15/2022,4.23,(6:2FTS) H-PFoctane sulfonic acid,Irrigation Canals,Reverse Osmosis,Persistent compound; avoid prolonged exposure.
+King,3/15/2022,2.11,(4:2FTS) H-PFhexane sulfonic acid,Private Wells,Granular Activated Carbon,Detected in small amounts; filtration is advised.
+King,3/15/2022,9.87,(11CI-PF3OUdS) 11-Chloroeicosafluor,King County Water System,Ion Exchange,Unknown health risks; filtration recommended.
+Kitsap,11/7/2023,15.32,(PFOS) PFoctane sulfonic acid,Puget Sound,Activated Carbon,Detected at concerning levels; filtration is strongly recommended.
+Kitsap,11/7/2023,10.29,(PFOA) PFoctanoic acid,Groundwater Wells,Reverse Osmosis,Persistent in water sources; recommended to remove with RO.
+Kitsap,11/7/2023,6.85,(PFNA) PFnonanoic acid,Municipal Water,Granular Activated Carbon,Moderate presence; filtration helps minimize exposure.
+Kitsap,11/7/2023,5.1,(PFHxS) PFhexane sulfonic acid,Surface Water,Ion Exchange Resin,Detected at low levels; should still be filtered.
+Kitsap,11/7/2023,3.05,(PFBS) PFbutane sulfonic acid,Puget Sound,Activated Carbon,Short-chain PFAS; considered lower risk but still advisable to filter.
+Kitsap,11/7/2023,11.75,(PFUnA) PFundecanoic acid,Private Wells,Reverse Osmosis,"Long-chain PFAS, highly persistent, best removed via RO."
+Kitsap,11/7/2023,4.22,(PFPeS) PFpentanesulfonic acid,Groundwater,Ion Exchange Resin,"Limited research, but filtration recommended."
+Kitsap,11/7/2023,2.85,(PFPeA) PFpentanoic acid,Municipal Water,Activated Carbon,Detected at low levels; filtration improves safety.
+Kitsap,11/7/2023,3.72,(PFMPA) PF-3-methoxypropanoic acid,Irrigation Canals,Reverse Osmosis,"Emerging PFAS; little known effects, filtration recommended."
+Kitsap,11/7/2023,6.09,(PFMBA) PF-4-methoxybutanoic acid,Surface Water,Granular Activated Carbon,May bioaccumulate; advisable to remove.
+Kitsap,11/7/2023,8.35,(PFHxA) PFhexanoic acid,Municipal Supply,Reverse Osmosis,Persistent in the environment; best removed through RO.
+Kitsap,11/7/2023,4.01,(PFHpS) PFheptanesulfonic acid,Private Wells,Activated Carbon,Moderate presence; activated carbon helps reduce risk.
+Kitsap,11/7/2023,10.19,(PFHpA) PFheptanoic acid,Irrigation Sources,Reverse Osmosis,May persist in water; recommended to filter.
+Kitsap,11/7/2023,5.22,(PFEESA) PF(2-ethoxyethane)sulfonic acid,Groundwater,Ion Exchange Resin,Lack of research; precautionary filtration suggested.
+Kitsap,11/7/2023,11.45,(PFDoA) PFdodecanoic acid,Surface Water,Reverse Osmosis,"Long-chain PFAS, very persistent, avoid exposure."
+Kitsap,11/7/2023,7.4,(PFDA) PFdecanoic acid,Puget Sound,Granular Activated Carbon,"Detected at significant levels, removal is advised."
+Kitsap,11/7/2023,2.35,(PFBA) PFbutanoic acid,Municipal Water,Activated Carbon,Short-chain PFAS but should still be filtered.
+Kitsap,11/7/2023,3.77,(NFDHA) NonaF-dioxaheptanoic acid,Wells and Groundwater,Reverse Osmosis,Unknown long-term effects; filtration is recommended.
+Kitsap,11/7/2023,6.6,(HFPO-DA) Hexafluoropropylene oxide,Water System,Ion Exchange Resin,Linked to potential health risks; should be filtered.
+Kitsap,11/7/2023,4.1,"(ADONA) 4,8-Dioxa-3H-perfluorononan",Lake and Rivers,Granular Activated Carbon,Emerging contaminant; filtration recommended.
+Kitsap,11/7/2023,8.88,(9CI-PF3ONS) 9-Chlorohexadecafluor,Puget Sound,Reverse Osmosis,"Persistent chemical, best removed with RO."
+Kitsap,11/7/2023,9.45,(8:2FTS) H-PFdecane sulfonic acid,Groundwater,Activated Carbon,Moderate risk; reduce exposure where possible.
+Kitsap,11/7/2023,5.63,(6:2FTS) H-PFoctane sulfonic acid,Irrigation Canals,Reverse Osmosis,Persistent compound; avoid prolonged exposure.
+Kitsap,11/7/2023,3.02,(4:2FTS) H-PFhexane sulfonic acid,Private Wells,Granular Activated Carbon,Detected in small amounts; filtration is advised.
+Kitsap,11/7/2023,2.69,(11CI-PF3OUdS) 11-Chloroeicosafluor,Water System,Ion Exchange Resin,Unknown health risks; filtration recommended.
+Pierce,7/11/2023,14.85,(PFOS) PFoctane sulfonic acid,Puyallup River,Activated Carbon,Detected at concerning levels; filtration is strongly recommended.
+Pierce,7/11/2023,9.42,(PFOA) PFoctanoic acid,Groundwater Wells,Reverse Osmosis,Persistent in water sources; recommended to remove with RO.
+Pierce,7/11/2023,7.81,(PFNA) PFnonanoic acid,Municipal Water,Granular Activated Carbon,Moderate presence; filtration helps minimize exposure.
+Pierce,7/11/2023,5.66,(PFHxS) PFhexane sulfonic acid,Surface Water,Ion Exchange Resin,Detected at low levels; should still be filtered.
+Pierce,7/11/2023,3.22,(PFBS) PFbutane sulfonic acid,Puyallup River,Activated Carbon,Short-chain PFAS; considered lower risk but still advisable to filter.
+Pierce,7/11/2023,12.94,(PFUnA) PFundecanoic acid,Private Wells,Reverse Osmosis,"Long-chain PFAS, highly persistent, best removed via RO."
+Pierce,7/11/2023,4.57,(PFPeS) PFpentanesulfonic acid,Groundwater,Ion Exchange Resin,"Limited research, but filtration recommended."
+Pierce,7/11/2023,2.95,(PFPeA) PFpentanoic acid,Municipal Water,Activated Carbon,Detected at low levels; filtration improves safety.
+Pierce,7/11/2023,3.88,(PFMPA) PF-3-methoxypropanoic acid,Irrigation Canals,Reverse Osmosis,"Emerging PFAS; little known effects, filtration recommended."
+Pierce,7/11/2023,6.21,(PFMBA) PF-4-methoxybutanoic acid,Surface Water,Granular Activated Carbon,May bioaccumulate; advisable to remove.
+Pierce,7/11/2023,8.15,(PFHxA) PFhexanoic acid,Municipal Supply,Reverse Osmosis,Persistent in the environment; best removed through RO.
+Pierce,7/11/2023,4.12,(PFHpS) PFheptanesulfonic acid,Private Wells,Activated Carbon,Moderate presence; activated carbon helps reduce risk.
+Pierce,7/11/2023,10.51,(PFHpA) PFheptanoic acid,Irrigation Sources,Reverse Osmosis,May persist in water; recommended to filter.
+Pierce,7/11/2023,5.47,(PFEESA) PF(2-ethoxyethane)sulfonic acid,Groundwater,Ion Exchange Resin,Lack of research; precautionary filtration suggested.
+Pierce,7/11/2023,11.03,(PFDoA) PFdodecanoic acid,Surface Water,Reverse Osmosis,"Long-chain PFAS, very persistent, avoid exposure."
+Pierce,7/11/2023,7.68,(PFDA) PFdecanoic acid,Puyallup River,Granular Activated Carbon,"Detected at significant levels, removal is advised."
+Pierce,7/11/2023,2.51,(PFBA) PFbutanoic acid,Municipal Water,Activated Carbon,Short-chain PFAS but should still be filtered.
+Pierce,7/11/2023,3.94,(NFDHA) NonaF-dioxaheptanoic acid,Wells and Groundwater,Reverse Osmosis,Unknown long-term effects; filtration is recommended.
+Pierce,7/11/2023,6.89,(HFPO-DA) Hexafluoropropylene oxide,Water System,Ion Exchange Resin,Linked to potential health risks; should be filtered.
+Pierce,7/11/2023,4.23,"(ADONA) 4,8-Dioxa-3H-perfluorononan",Lake and Rivers,Granular Activated Carbon,Emerging contaminant; filtration recommended.
+Pierce,7/11/2023,8.72,(9CI-PF3ONS) 9-Chlorohexadecafluor,Puyallup River,Reverse Osmosis,"Persistent chemical, best removed with RO."
+Pierce,7/11/2023,9.88,(8:2FTS) H-PFdecane sulfonic acid,Groundwater,Activated Carbon,Moderate risk; reduce exposure where possible.
+Pierce,7/11/2023,5.79,(6:2FTS) H-PFoctane sulfonic acid,Irrigation Canals,Reverse Osmosis,Persistent compound; avoid prolonged exposure.
+Pierce,7/11/2023,3.14,(4:2FTS) H-PFhexane sulfonic acid,Private Wells,Granular Activated Carbon,Detected in small amounts; filtration is advised.
+Pierce,7/11/2023,2.76,(11CI-PF3OUdS) 11-Chloroeicosafluor,Water System,Ion Exchange Resin,Unknown health risks; filtration recommended.
+Spokane,4/8/2024,42.1,(PFOS) PFoctane sulfonic acid,Spokane River,Activated Carbon,High levels detected; filtration is strongly recommended.
+Spokane,4/8/2024,39.85,(PFOA) PFoctanoic acid,Groundwater Wells,Reverse Osmosis,Detected above EPA advisory limit; RO filtration needed.
+Spokane,4/8/2024,35.72,(PFNA) PFnonanoic acid,Municipal Water,Granular Activated Carbon,Moderate presence; activated carbon can reduce exposure.
+Spokane,4/8/2024,28.95,(PFHxS) PFhexane sulfonic acid,Surface Water,Ion Exchange Resin,Detected at lower levels; filtration is still advised.
+Spokane,4/8/2024,25.5,(PFBS) PFbutane sulfonic acid,Spokane River,Activated Carbon,"Short-chain PFAS, lower risk but advisable to filter."
+Spokane,4/8/2024,42.11,(PFUnA) PFundecanoic acid,Private Wells,Reverse Osmosis,"Highly persistent, best removed via RO."
+Spokane,4/8/2024,36.5,(PFPeS) PFpentanesulfonic acid,Groundwater,Ion Exchange Resin,"Limited research, but filtration recommended."
+Spokane,4/8/2024,31.2,(PFPeA) PFpentanoic acid,Spokane Water Supply,Activated Carbon,Detected at low levels; filtration improves safety.
+Spokane,4/8/2024,28.9,(PFMPA) PF-3-methoxypropanoic acid,Irrigation Canals,Reverse Osmosis,Emerging PFAS with little known effects; filtration is recommended.
+Spokane,4/8/2024,30.15,(PFMBA) PF-4-methoxybutanoic acid,Surface Water,Granular Activated Carbon,Could bioaccumulate; removing it is advised.
+Spokane,4/8/2024,35,(PFHxA) PFhexanoic acid,Spokane Municipal Supply,Reverse Osmosis,PFHxA is persistent; best removed through RO.
+Spokane,4/8/2024,28.92,(PFHpS) PFheptanesulfonic acid,Private Wells,Activated Carbon,Moderate presence; activated carbon helps reduce risk.
+Spokane,4/8/2024,32.5,(PFHpA) PFheptanoic acid,Irrigation Sources,Reverse Osmosis,May persist in water; recommended to filter.
+Spokane,4/8/2024,39.8,(PFEESA) PF(2-ethoxyethane)sulfonic acid,Groundwater,Ion Exchange,Lack of research; precautionary filtration suggested.
+Spokane,4/8/2024,41.5,(PFDoA) PFdodecanoic acid,Surface Water,Reverse Osmosis,"Long-chain PFAS, very persistent, avoid exposure."
+Spokane,4/8/2024,37.25,(PFDA) PFdecanoic acid,Spokane River,Granular Activated Carbon,"Detected at significant levels, removal is advised."
+Spokane,4/8/2024,34.85,(PFBA) PFbutanoic acid,Municipal Water,Activated Carbon,Short-chain PFAS but should still be filtered.
+Spokane,4/8/2024,41,(NFDHA) NonaF-dioxaheptanoic acid,Wells and Groundwater,Reverse Osmosis,Unknown long-term effects; filtration is recommended.
+Spokane,4/8/2024,37.9,(HFPO-DA) Hexafluoropropylene oxide,Spokane Water System,Ion Exchange,Linked to potential health risks; should be filtered.
+Spokane,4/8/2024,39.95,"(ADONA) 4,8-Dioxa-3H-perfluorononan",Lake and Rivers,Granular Activated Carbon,Emerging contaminant; filtration recommended.
+Spokane,4/8/2024,38.2,(9CI-PF3ONS) 9-Chlorohexadecafluor,Spokane River,Reverse Osmosis,"Persistent chemical, best removed with RO."
+Spokane,4/8/2024,32.1,(8:2FTS) H-PFdecane sulfonic acid,Groundwater,Activated Carbon,Moderate risk; reduce exposure where possible.
+Spokane,4/8/2024,28.98,(6:2FTS) H-PFoctane sulfonic acid,Irrigation Canals,Reverse Osmosis,Persistent compound; avoid prolonged exposure.
+Spokane,4/8/2024,27.5,(4:2FTS) H-PFhexane sulfonic acid,Private Wells,Granular Activated Carbon,Detected in small amounts; filtration is advised.
+Spokane,4/8/2024,39.1,(11CI-PF3OUdS) 11-Chloroeicosafluor,Spokane Water System,Ion Exchange,Unknown health risks; filtration recommended.
+Yakima,4/8/2024,45.2,(PFOS) PFoctane sulfonic acid,Yakima River,Activated Carbon,High PFOS levels; filtration is strongly recommended.
+Yakima,4/8/2024,38.75,(PFOA) PFoctanoic acid,Groundwater Wells,Reverse Osmosis,Detected near EPA limits; RO filtration needed.
+Yakima,4/8/2024,32.68,(PFNA) PFnonanoic acid,Municipal Water,Granular Activated Carbon,Moderate PFAS presence; filtration advised.
+Yakima,4/8/2024,29.92,(PFHxS) PFhexane sulfonic acid,Surface Water,Ion Exchange Resin,Detected at lower levels; filtration recommended.
+Yakima,4/8/2024,21.4,(PFBS) PFbutane sulfonic acid,Yakima River,Activated Carbon,"Short-chain PFAS, lower toxicity, but advisable to filter."
+Yakima,4/8/2024,43.85,(PFUnA) PFundecanoic acid,Private Wells,Reverse Osmosis,"Long-chain PFAS, highly persistent, best removed via RO."
+Yakima,4/8/2024,34.12,(PFPeS) PFpentanesulfonic acid,Groundwater,Ion Exchange Resin,"Limited research available, but filtration is recommended."
+Yakima,4/8/2024,28.75,(PFPeA) PFpentanoic acid,Yakima Water Supply,Activated Carbon,Detected at low levels; filtration improves safety.
+Yakima,4/8/2024,31.88,(PFMPA) PF-3-methoxypropanoic acid,Irrigation Canals,Reverse Osmosis,Emerging PFAS with little known effects; filtration is recommended.
+Yakima,4/8/2024,33.45,(PFMBA) PF-4-methoxybutanoic acid,Surface Water,Granular Activated Carbon,Potential bioaccumulation risk; removal advised.
+Yakima,4/8/2024,37.9,(PFHxA) PFhexanoic acid,Yakima Municipal Supply,Reverse Osmosis,PFHxA is persistent; best removed through RO.
+Yakima,4/8/2024,26.35,(PFHpS) PFheptanesulfonic acid,Private Wells,Activated Carbon,Moderate presence; activated carbon helps reduce risk.
+Yakima,4/8/2024,30.65,(PFHpA) PFheptanoic acid,Irrigation Sources,Reverse Osmosis,May persist in water; recommended to filter.
+Yakima,4/8/2024,39.2,(PFEESA) PF(2-ethoxyethane)sulfonic acid,Groundwater,Ion Exchange,Limited data; precautionary filtration suggested.
+Yakima,4/8/2024,42.75,(PFDoA) PFdodecanoic acid,Surface Water,Reverse Osmosis,"Highly persistent, long-chain PFAS; avoid exposure."
+Yakima,4/8/2024,40.1,(PFDA) PFdecanoic acid,Yakima River,Granular Activated Carbon,"Detected at significant levels, removal is advised."
+Yakima,4/8/2024,29.85,(PFBA) PFbutanoic acid,Municipal Water,Activated Carbon,Short-chain PFAS but should still be filtered.
+Yakima,4/8/2024,41.3,(NFDHA) NonaF-dioxaheptanoic acid,Wells and Groundwater,Reverse Osmosis,Unknown long-term effects; filtration is recommended.
+Yakima,4/8/2024,36.55,(HFPO-DA) Hexafluoropropylene oxide,Yakima Water System,Ion Exchange,Linked to potential health risks; should be filtered.
+Yakima,4/8/2024,38.45,"(ADONA) 4,8-Dioxa-3H-perfluorononan",Lake and Rivers,Granular Activated Carbon,Emerging contaminant; filtration recommended.
+Yakima,4/8/2024,37.25,(9CI-PF3ONS) 9-Chlorohexadecafluor,Yakima River,Reverse Osmosis,"Persistent chemical, best removed with RO."
+Yakima,4/8/2024,30.1,(8:2FTS) H-PFdecane sulfonic acid,Groundwater,Activated Carbon,Moderate risk; reduce exposure where possible.
+Yakima,4/8/2024,28.2,(6:2FTS) H-PFoctane sulfonic acid,Irrigation Canals,Reverse Osmosis,Persistent compound; avoid prolonged exposure.
+Yakima,4/8/2024,26.75,(4:2FTS) H-PFhexane sulfonic acid,Private Wells,Granular Activated Carbon,Detected in small amounts; filtration is advised.
+Yakima,4/8/2024,39.75,(11CI-PF3OUdS) 11-Chloroeicosafluor,Yakima Water System,Ion Exchange,Unknown health risks; filtration recommended.
