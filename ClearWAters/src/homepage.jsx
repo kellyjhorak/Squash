@@ -9,14 +9,15 @@ const PfasData = ({ countyInput, onBack }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    Papa.parse('../../DATA/MAP.csv', {
+    Papa.parse('../../DATA/home_map_dataset.csv', {
       header: true,
       download: true,
-      complete: function(results) {
+      skipEmptyLines: true,
+      complete: function (results) {
         setData(results.data);
         setLoading(false);
       },
-      error: function(err) {
+      error: function (err) {
         setError(err);
         setLoading(false);
       }
@@ -26,25 +27,30 @@ const PfasData = ({ countyInput, onBack }) => {
   if (loading) return <p>Loading data...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  // Filter data for the selected county
+  // Filter for the selected county
   const filteredData = data.filter(item => item.County === countyInput);
 
   if (filteredData.length === 0) {
     return <p className="no-results">No data found for "{countyInput}"</p>;
   }
 
-  // Helper function to parse dates from MM/DD/YYYY format
+  // Helper function to parse dates in MM/DD/YY format
   const parseDate = (dateString) => {
-    const [month, day, year] = dateString.split('/');
-    return new Date(year, month - 1, day);
+    const parts = dateString.split('/');
+    // parts: [month, day, year]
+    let year = parts[2];
+    if (year.length === 2) {
+      year = '20' + year; // convert e.g., "23" to "2023"
+    }
+    return new Date(year, parts[0] - 1, parts[1]);
   };
 
-  // Group the data by PFAS measured and keep only the row with the most recent testing date for each PFAS
+  // Group by PFAS Measured and pick the row with the most recent Testing Date for each PFAS
   const mostRecentDataByPFAS = filteredData.reduce((acc, curr) => {
-    const pfaKey = curr["PFAS Measured"];
+    const pfa = curr["PFAS Measured"];
     const currDate = parseDate(curr["Testing Date"]);
-    if (!acc[pfaKey] || currDate > parseDate(acc[pfaKey]["Testing Date"])) {
-      acc[pfaKey] = curr;
+    if (!acc[pfa] || currDate > parseDate(acc[pfa]["Testing Date"])) {
+      acc[pfa] = curr;
     }
     return acc;
   }, {});
@@ -54,19 +60,21 @@ const PfasData = ({ countyInput, onBack }) => {
   return (
     <div>
       <header style={{ display: 'flex', alignItems: 'center' }}>
-        <button onClick={onBack} style={{ fontSize: '1em', padding: '10px', marginRight: '15px' }}>
+        <button
+          onClick={onBack}
+          style={{ fontSize: '1em', padding: '10px', marginRight: '15px' }}
+        >
           Back
         </button>
       </header>
-
       <main>
         <div className="container">
           <div id="data-section">
             <table>
               <thead>
                 <tr>
-                  <th>Water System ID</th>
                   <th>Water System Name</th>
+                  <th>Source</th>
                   <th>County</th>
                   <th>Testing Date</th>
                   <th>PFAS Measured</th>
@@ -78,14 +86,14 @@ const PfasData = ({ countyInput, onBack }) => {
               <tbody>
                 {mostRecentData.map((item, index) => (
                   <tr key={index}>
-                    <td>{item["Water System ID"]}</td>
                     <td>{item["Water System Name"]}</td>
+                    <td>{item.Source}</td>
                     <td>{item.County}</td>
                     <td>{item["Testing Date"]}</td>
                     <td>{item["PFAS Measured"]}</td>
                     <td>{item.Result}</td>
                     <td>{item["State Action Level (SAL)"]}</td>
-                    <td>{item.Calculation_result_range_bins_text}</td>
+                    <td>{item["Calculation_result_range_bins_text"]}</td>
                   </tr>
                 ))}
               </tbody>
@@ -116,7 +124,7 @@ export default function Homepage() {
     setCountyInput('');
   };
 
-  // Adjust the counties list if needed to match the CSV data exactly
+  // Adjust the county list as needed based on your dataset
   const counties = ["Kitsap", "King", "Pierce", "Spokane", "Yakima"];
 
   return (
@@ -126,7 +134,6 @@ export default function Homepage() {
         <header>
           <h1>PFAS Contamination Data</h1>
         </header>
-
         <main>
           {!showData ? (
             <div className="input-section">
@@ -138,10 +145,15 @@ export default function Homepage() {
               >
                 <option value="">Select a County</option>
                 {counties.map(county => (
-                  <option key={county} value={county}>{county}</option>
+                  <option key={county} value={county}>
+                    {county}
+                  </option>
                 ))}
               </select>
-              <button onClick={handleSearch} style={{ fontSize: '1.2em', padding: '10px', marginLeft: '15px' }}>
+              <button
+                onClick={handleSearch}
+                style={{ fontSize: '1.2em', padding: '10px', marginLeft: '15px' }}
+              >
                 GO
               </button>
             </div>
