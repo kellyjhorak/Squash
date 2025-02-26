@@ -1,13 +1,12 @@
 {/* this will be the landing page where users type in their zipcode*/} 
 
-
 import React, { useState } from 'react';
 import Navbar from './navbar';
 import Footer from './Footer';
 
 const counties = ["King", "Kitsap", "Pierce", "Spokane", "Yakima"];
 
-const PfasData = ({ countyInput }) => {
+const PfasData = ({ countyInput, onBack }) => {
   const data = [
     { county_name: "King", measurement_date: "3/15/2022", pfas_level: 14.32, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Cedar River", recommended_filter: "Activated Carbon", comments: "PFOS levels slightly elevated; filtration recommended." },
     { county_name: "Kitsap", measurement_date: "11/7/2023", pfas_level: 15.32, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Puget Sound", recommended_filter: "Activated Carbon", comments: "Detected at concerning levels; filtration strongly recommended." },
@@ -20,7 +19,8 @@ const PfasData = ({ countyInput }) => {
 
   return (
     <div>
-      <header>
+      <header style={{ display: 'flex', alignItems: 'center' }}>
+        <button onClick={onBack} style={{ fontSize: '1em', padding: '10px', marginRight: '15px' }}>Back</button>
         <h1>PFAS Contamination Data</h1>
       </header>
 
@@ -78,6 +78,11 @@ export default function Homepage() {
     }
   };
 
+  const handleBack = () => {
+    setShowData(false);
+    setCountyInput('');
+  };
+
   return (
     <div>
       <Navbar />
@@ -93,17 +98,17 @@ export default function Homepage() {
                 id="county-select"
                 value={countyInput}
                 onChange={handleSelectChange}
-                style={{ fontSize: '1.2em', padding: '10px', width: '250px' }}
+                style={{ fontSize: '2.5em', padding: '25px', width: '450px' }}
               >
                 <option value="">Select a County</option>
                 {counties.map(county => (
                   <option key={county} value={county}>{county}</option>
                 ))}
               </select>
-              <button onClick={handleSearch} style={{ fontSize: '1.2em', padding: '10px', marginLeft: '10px' }}>GO</button>
+              <button onClick={handleSearch} style={{ fontSize: '1.2em', padding: '10px', marginLeft: '15px' }}>GO</button>
             </div>
           ) : (
-            <PfasData countyInput={countyInput} />
+            <PfasData countyInput={countyInput} onBack={handleBack} />
           )}
         </main>
       </div>
