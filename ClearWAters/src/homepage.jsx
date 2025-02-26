@@ -20,6 +20,10 @@ const PfasData = ({ countyInput }) => {
 
   return (
     <div>
+      <header>
+        <h1>PFAS Contamination Data</h1>
+      </header>
+
       <main>
         <div className="container">
           <div id="data-section">
