@@ -1,61 +1,95 @@
-{/* this will be the landing page where users type in their zipcode*/} 
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Papa from 'papaparse';
 import Navbar from './navbar';
 import Footer from './Footer';
 
-const counties = ["King", "Kitsap", "Pierce", "Spokane", "Yakima"];
-
 const PfasData = ({ countyInput, onBack }) => {
-  const data = [
-    { county_name: "King", measurement_date: "3/15/2022", pfas_level: 14.32, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Cedar River", recommended_filter: "Activated Carbon", comments: "PFOS levels slightly elevated; filtration recommended." },
-    { county_name: "Kitsap", measurement_date: "11/7/2023", pfas_level: 15.32, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Puget Sound", recommended_filter: "Activated Carbon", comments: "Detected at concerning levels; filtration strongly recommended." },
-    { county_name: "Pierce", measurement_date: "7/11/2023", pfas_level: 14.85, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Puyallup River", recommended_filter: "Activated Carbon", comments: "Detected at concerning levels; filtration is strongly recommended." },
-    { county_name: "Spokane", measurement_date: "4/8/2024", pfas_level: 42.1, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Spokane River", recommended_filter: "Activated Carbon", comments: "High levels detected; filtration is strongly recommended." },
-    { county_name: "Yakima", measurement_date: "4/8/2024", pfas_level: 45.2, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Yakima River", recommended_filter: "Activated Carbon", comments: "High PFOS levels; filtration strongly recommended." }
-  ];
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const filteredData = data.filter(item => item.county_name === countyInput);
+  useEffect(() => {
+    Papa.parse('../../DATA/MAP.csv', {
+      header: true,
+      download: true,
+      complete: function(results) {
+        setData(results.data);
+        setLoading(false);
+      },
+      error: function(err) {
+        setError(err);
+        setLoading(false);
+      }
+    });
+  }, []);
+
+  if (loading) return <p>Loading data...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  // Filter data for the selected county
+  const filteredData = data.filter(item => item.County === countyInput);
+
+  if (filteredData.length === 0) {
+    return <p className="no-results">No data found for "{countyInput}"</p>;
+  }
+
+  // Helper function to parse dates from MM/DD/YYYY format
+  const parseDate = (dateString) => {
+    const [month, day, year] = dateString.split('/');
+    return new Date(year, month - 1, day);
+  };
+
+  // Group the data by PFAS measured and keep only the row with the most recent testing date for each PFAS
+  const mostRecentDataByPFAS = filteredData.reduce((acc, curr) => {
+    const pfaKey = curr["PFAS Measured"];
+    const currDate = parseDate(curr["Testing Date"]);
+    if (!acc[pfaKey] || currDate > parseDate(acc[pfaKey]["Testing Date"])) {
+      acc[pfaKey] = curr;
+    }
+    return acc;
+  }, {});
+
+  const mostRecentData = Object.values(mostRecentDataByPFAS);
 
   return (
     <div>
       <header style={{ display: 'flex', alignItems: 'center' }}>
-        <button onClick={onBack} style={{ fontSize: '1em', padding: '10px', marginRight: '15px' }}>Back</button>
+        <button onClick={onBack} style={{ fontSize: '1em', padding: '10px', marginRight: '15px' }}>
+          Back
+        </button>
       </header>
 
       <main>
         <div className="container">
           <div id="data-section">
-            {filteredData.length === 0 ? (
-              <p className="no-results">No data found for "{countyInput}"</p>
-            ) : (
-              <table>
-                <thead>
-                  <tr>
-                    <th>County</th>
-                    <th>Measurement Date</th>
-                    <th>PFAS Compound</th>
-                    <th>Water Source</th>
-                    <th>PFAS Level</th>
-                    <th>Recommended Filter</th>
-                    <th>Comments</th>
+            <table>
+              <thead>
+                <tr>
+                  <th>Water System ID</th>
+                  <th>Water System Name</th>
+                  <th>County</th>
+                  <th>Testing Date</th>
+                  <th>PFAS Measured</th>
+                  <th>Result</th>
+                  <th>State Action Level (SAL)</th>
+                  <th>Calculation Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                {mostRecentData.map((item, index) => (
+                  <tr key={index}>
+                    <td>{item["Water System ID"]}</td>
+                    <td>{item["Water System Name"]}</td>
+                    <td>{item.County}</td>
+                    <td>{item["Testing Date"]}</td>
+                    <td>{item["PFAS Measured"]}</td>
+                    <td>{item.Result}</td>
+                    <td>{item["State Action Level (SAL)"]}</td>
+                    <td>{item.Calculation_result_range_bins_text}</td>
                   </tr>
-                </thead>
-                <tbody>
-                  {filteredData.map(item => (
-                    <tr key={item.county_name}>
-                      <td>{item.county_name}</td>
-                      <td>{item.measurement_date}</td>
-                      <td>{item.pfas_compound}</td>
-                      <td>{item.water_source}</td>
-                      <td>{item.pfas_level}</td>
-                      <td>{item.recommended_filter}</td>
-                      <td>{item.comments}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            )}
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </main>
@@ -82,6 +116,9 @@ export default function Homepage() {
     setCountyInput('');
   };
 
+  // Adjust the counties list if needed to match the CSV data exactly
+  const counties = ["Kitsap", "King", "Pierce", "Spokane", "Yakima"];
+
   return (
     <div>
       <Navbar />
@@ -104,7 +141,9 @@ export default function Homepage() {
                   <option key={county} value={county}>{county}</option>
                 ))}
               </select>
-              <button onClick={handleSearch} style={{ fontSize: '1.2em', padding: '10px', marginLeft: '15px' }}>GO</button>
+              <button onClick={handleSearch} style={{ fontSize: '1.2em', padding: '10px', marginLeft: '15px' }}>
+                GO
+              </button>
             </div>
           ) : (
             <PfasData countyInput={countyInput} onBack={handleBack} />
