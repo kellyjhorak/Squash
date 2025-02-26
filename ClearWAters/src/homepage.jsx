@@ -21,7 +21,6 @@ const PfasData = ({ countyInput, onBack }) => {
     <div>
       <header style={{ display: 'flex', alignItems: 'center' }}>
         <button onClick={onBack} style={{ fontSize: '1em', padding: '10px', marginRight: '15px' }}>Back</button>
-        <h1>PFAS Contamination Data</h1>
       </header>
 
       <main>
@@ -98,7 +97,7 @@ export default function Homepage() {
                 id="county-select"
                 value={countyInput}
                 onChange={handleSelectChange}
-                style={{ fontSize: '2.5em', padding: '25px', width: '450px' }}
+                style={{ fontSize: '1.2em', padding: '13px', width: '400px' }}
               >
                 <option value="">Select a County</option>
                 {counties.map(county => (
