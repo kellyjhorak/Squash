@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import Navbar from './navbar';
 import Footer from './Footer';
 
+const counties = ["King", "Kitsap", "Pierce", "Spokane", "Yakima"];
+
 const PfasData = ({ countyInput }) => {
   const data = [
     { county_name: "King", measurement_date: "3/15/2022", pfas_level: 14.32, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Cedar River", recommended_filter: "Activated Carbon", comments: "PFOS levels slightly elevated; filtration recommended." },
@@ -14,14 +16,10 @@ const PfasData = ({ countyInput }) => {
     { county_name: "Yakima", measurement_date: "4/8/2024", pfas_level: 45.2, pfas_compound: "(PFOS) PFoctane sulfonic acid", water_source: "Yakima River", recommended_filter: "Activated Carbon", comments: "High PFOS levels; filtration strongly recommended." }
   ];
 
-  const filteredData = data.filter(item => item.county_name.toLowerCase().includes(countyInput.toLowerCase()));
+  const filteredData = data.filter(item => item.county_name === countyInput);
 
   return (
     <div>
-      <header>
-        <h1>PFAS Contamination Data</h1>
-      </header>
-
       <main>
         <div className="container">
           <div id="data-section">
@@ -66,12 +64,12 @@ export default function Homepage() {
   const [countyInput, setCountyInput] = useState('');
   const [showData, setShowData] = useState(false);
 
-  const handleInputChange = (e) => {
+  const handleSelectChange = (e) => {
     setCountyInput(e.target.value);
   };
 
   const handleSearch = () => {
-    if (countyInput.trim()) {
+    if (countyInput) {
       setShowData(true);
     }
   };
@@ -87,14 +85,18 @@ export default function Homepage() {
         <main>
           {!showData ? (
             <div className="input-section">
-              <input
-                type="text"
-                id="county-input"
-                placeholder="Enter County Name"
+              <select
+                id="county-select"
                 value={countyInput}
-                onChange={handleInputChange}
-              />
-              <button onClick={handleSearch}>GO</button>
+                onChange={handleSelectChange}
+                style={{ fontSize: '1.2em', padding: '10px', width: '250px' }}
+              >
+                <option value="">Select a County</option>
+                {counties.map(county => (
+                  <option key={county} value={county}>{county}</option>
+                ))}
+              </select>
+              <button onClick={handleSearch} style={{ fontSize: '1.2em', padding: '10px', marginLeft: '10px' }}>GO</button>
             </div>
           ) : (
             <PfasData countyInput={countyInput} />
