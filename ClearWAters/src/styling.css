@@ -1,9 +1,19 @@
 
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: "Concert One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #174785;
+  margin: 0; /* Remove default margins if needed */
+  padding: 0;
 }
 
 

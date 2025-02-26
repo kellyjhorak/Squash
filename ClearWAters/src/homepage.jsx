@@ -37,7 +37,6 @@ const PfasData = ({ countyInput, onBack }) => {
   // Helper function to parse dates in MM/DD/YY format
   const parseDate = (dateString) => {
     const parts = dateString.split('/');
-    // parts: [month, day, year]
     let year = parts[2];
     if (year.length === 2) {
       year = '20' + year; // convert e.g., "23" to "2023"
@@ -57,6 +56,9 @@ const PfasData = ({ countyInput, onBack }) => {
 
   const mostRecentData = Object.values(mostRecentDataByPFAS);
 
+  // Print the count to the console
+  console.log(`Number of PFAS returned for ${countyInput}: ${mostRecentData.length}`);
+
   return (
     <div>
       <header style={{ display: 'flex', alignItems: 'center' }}>
@@ -70,6 +72,8 @@ const PfasData = ({ countyInput, onBack }) => {
       <main>
         <div className="container">
           <div id="data-section">
+            {/* Display the count on the UI */}
+            <p>{mostRecentData.length} PFAS entries found for {countyInput} county.</p>
             <table>
               <thead>
                 <tr>
