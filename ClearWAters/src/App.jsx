@@ -6,6 +6,7 @@ import Resources from './resources';
 
 {/*
   this is a comment for sophia
+  this is a comment for kelly!!!!
 */}
 
 const App = () => {
