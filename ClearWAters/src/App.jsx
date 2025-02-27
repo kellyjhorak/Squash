@@ -5,7 +5,7 @@ import Map from './Map';
 import Resources from './resources';
 
 {/*
-  
+  this is a comment for sophia
 */}
 
 const App = () => {
