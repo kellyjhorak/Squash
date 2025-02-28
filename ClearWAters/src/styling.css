@@ -130,15 +130,17 @@ border-radius: 25px;
 }
 
 .big-circle {
-  width: 150px;
-  height: 150px;
+  width: 250px;       /* Fixed width */
+  height: 250px;      /* Fixed height */
+  flex-shrink: 0;     /* Prevents shrinking in flex containers */
+  flex-grow: 0;       /* Prevents growing in flex containers */
   border-radius: 50%;
-  background-color: #4CAF50; /* green background */
+  background-color: #982649;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2em;
+  font-size: 70px;    /* Fixed font size in pixels */
   font-weight: bold;
   margin-right: 20px;
 }
@@ -153,7 +155,7 @@ border-radius: 25px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #2196F3; /* blue background */
+  background-color: #2195f3ba; /* blue background */
   color: #fff;
   display: flex;
   align-items: center;
@@ -162,6 +164,7 @@ border-radius: 25px;
   margin: 10px;
   text-align: center;
   padding: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Optional: Back button styling */

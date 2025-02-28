@@ -44,6 +44,12 @@ const PfasData = ({ countyInput, onBack }) => {
     return new Date(year, parts[0] - 1, parts[1]);
   };
 
+  const extractLabel = (pfasName) => {
+    const match = pfasName.match(/\(([^)]+)\)/); // Captures text inside parentheses
+    return match ? match[1] : pfasName; // Returns only the inside text, removing parentheses
+  };
+  
+
   // Group by PFAS Measured and pick the row with the most recent Testing Date for each PFAS
   const mostRecentDataByPFAS = filteredData.reduce((acc, curr) => {
     const pfa = curr["PFAS Measured"];
@@ -55,6 +61,7 @@ const PfasData = ({ countyInput, onBack }) => {
   }, {});
 
   const mostRecentData = Object.values(mostRecentDataByPFAS);
+
 
   console.log(`Number of PFAS returned for ${countyInput}: ${mostRecentData.length}`);
 
@@ -76,11 +83,11 @@ const PfasData = ({ countyInput, onBack }) => {
             </div>
             {/* Container for small circles with PFAS names */}
             <div className="small-circles-container">
-              {mostRecentData.map((item, index) => (
-                <div key={index} className="small-circle">
-                  {item["PFAS Measured"]}
-                </div>
-              ))}
+            {mostRecentData.map((item, index) => (
+              <div key={index} className="small-circle">
+                {extractLabel(item["PFAS Measured"])}
+              </div>
+            ))}
             </div>
           </div>
         </div>
