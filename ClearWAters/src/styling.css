@@ -121,3 +121,52 @@ margin-right: 5.0em;
 margin-bottom: 1.0em;
 border-radius: 25px;
 }
+
+/* PFAS Data display styling */
+.pfas-container {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.big-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #4CAF50; /* green background */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.small-circles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.small-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #2196F3; /* blue background */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  margin: 10px;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Optional: Back button styling */
+.back-button {
+  font-size: 1em;
+  padding: 10px;
+  margin-right: 15px;
+}

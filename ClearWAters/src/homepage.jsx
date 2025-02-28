@@ -56,52 +56,32 @@ const PfasData = ({ countyInput, onBack }) => {
 
   const mostRecentData = Object.values(mostRecentDataByPFAS);
 
-  // Print the count to the console
   console.log(`Number of PFAS returned for ${countyInput}: ${mostRecentData.length}`);
 
   return (
     <div>
-      <header style={{ display: 'flex', alignItems: 'center' }}>
-        <button
-          onClick={onBack}
-          style={{ fontSize: '1em', padding: '10px', marginRight: '15px' }}
-        >
+      <header>
+        <button onClick={onBack} className="back-button">
           Back
         </button>
       </header>
       <main>
         <div className="container">
-          <div id="data-section">
-            {/* Display the count on the UI */}
-            <p>{mostRecentData.length} PFAS entries found for {countyInput} county.</p>
-            <table>
-              <thead>
-                <tr>
-                  <th>Water System Name</th>
-                  <th>Source</th>
-                  <th>County</th>
-                  <th>Testing Date</th>
-                  <th>PFAS Measured</th>
-                  <th>Result</th>
-                  <th>State Action Level (SAL)</th>
-                  <th>Calculation Result</th>
-                </tr>
-              </thead>
-              <tbody>
-                {mostRecentData.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item["Water System Name"]}</td>
-                    <td>{item.Source}</td>
-                    <td>{item.County}</td>
-                    <td>{item["Testing Date"]}</td>
-                    <td>{item["PFAS Measured"]}</td>
-                    <td>{item.Result}</td>
-                    <td>{item["State Action Level (SAL)"]}</td>
-                    <td>{item["Calculation_result_range_bins_text"]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          {/* Optional display of count info */}
+          <p>{mostRecentData.length} PFAS entries found for {countyInput} county.</p>
+          <div className="pfas-container">
+            {/* Big circle displaying the PFAS count */}
+            <div className="big-circle">
+              {mostRecentData.length}
+            </div>
+            {/* Container for small circles with PFAS names */}
+            <div className="small-circles-container">
+              {mostRecentData.map((item, index) => (
+                <div key={index} className="small-circle">
+                  {item["PFAS Measured"]}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </main>
@@ -140,7 +120,11 @@ export default function Homepage() {
         </header>
         <div id="main_info"> 
           <h2>What is a PFA?</h2>
-          <p>PFAs (per- and polyfluoroalkyl sustance) are a category of man-made harmful chemicals. PFA's can be found in a wide variety of items, such as homewears, clothing, and medical equipment. These chemicals do not break down, so they find themselves in places like our watershed from dumping, manufacturing, and leaching. </p>
+          <p>
+            PFAs (per- and polyfluoroalkyl sustance) are a category of man-made harmful chemicals. 
+            PFA's can be found in a wide variety of items, such as homewears, clothing, and medical equipment. 
+            These chemicals do not break down, so they find themselves in places like our watershed from dumping, manufacturing, and leaching.
+          </p>
         </div>
         <main>
           {!showData ? (
