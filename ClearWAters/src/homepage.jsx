@@ -74,12 +74,11 @@ const PfasData = ({ countyInput, onBack }) => {
       </header>
       <main>
         <div className="container">
-          {/* Optional display of count info */}
-          <p>{mostRecentData.length} PFAS entries found for {countyInput} county.</p>
           <div className="pfas-container">
             {/* Big circle displaying the PFAS count */}
             <div className="big-circle">
-              {mostRecentData.length}
+              <span className="big-number">{mostRecentData.length}</span>
+              <span className="big-label">PFAs detected</span>
             </div>
             {/* Container for small circles with PFAS names */}
             <div className="small-circles-container">
@@ -125,11 +124,11 @@ export default function Homepage() {
         <header>
           <h1>PFAS Contamination Data</h1>
         </header>
-        <div id="main_info"> 
+        <div id="main_info" style={{ display: showData ? 'none' : 'block' }}>
           <h2>What is a PFA?</h2>
           <p>
-            PFAs (per- and polyfluoroalkyl sustance) are a category of man-made harmful chemicals. 
-            PFA's can be found in a wide variety of items, such as homewears, clothing, and medical equipment. 
+            PFAs (per- and polyfluoroalkyl substances) are a category of man-made harmful chemicals. 
+            PFAs can be found in a wide variety of items, such as homewares, clothing, and medical equipment. 
             These chemicals do not break down, so they find themselves in places like our watershed from dumping, manufacturing, and leaching.
           </p>
         </div>

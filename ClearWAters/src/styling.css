@@ -130,19 +130,22 @@ border-radius: 25px;
 }
 
 .big-circle {
-  width: 250px;       /* Fixed width */
-  height: 250px;      /* Fixed height */
-  flex-shrink: 0;     /* Prevents shrinking in flex containers */
-  flex-grow: 0;       /* Prevents growing in flex containers */
+  width: 200px !important; /* Force a fixed width */
+  height: 200px !important; /* Force a fixed height */
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 200px;
+  max-height: 200px;
   border-radius: 50%;
   background-color: #982649;
   color: #fff;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 70px;    /* Fixed font size in pixels */
-  font-weight: bold;
-  margin-right: 20px;
+  text-align: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0; /* Prevent shrinking inside flex containers */
 }
 
 .small-circles-container {
@@ -150,6 +153,15 @@ border-radius: 25px;
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.big-number {
+  font-size: 70px; /* Keeps the number at full size */
+}
+
+.big-label {
+  font-size: 18px; /* 50% of the number size */
+}
+
 
 .small-circle {
   width: 100px;
@@ -160,7 +172,7 @@ border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1em;
+  font-size: 20px;
   margin: 10px;
   text-align: center;
   padding: 5px;
