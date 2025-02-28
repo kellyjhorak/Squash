@@ -135,12 +135,7 @@ export default function Homepage() {
         <main>
           {!showData ? (
             <div className="input-section">
-              <select
-                id="county-select"
-                value={countyInput}
-                onChange={handleSelectChange}
-                style={{ fontSize: '1.2em', padding: '13px', width: '400px' }}
-              >
+              <select id="county-select" value={countyInput} onChange={handleSelectChange}>
                 <option value="">Select a County</option>
                 {counties.map(county => (
                   <option key={county} value={county}>
