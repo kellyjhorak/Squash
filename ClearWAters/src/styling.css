@@ -111,10 +111,13 @@ footer {
 }
 
 #main_info {
+display: flex;
+justify-content: center;
+flex-direction: column;
 Background-color: #71A2B6;
 padding : 2.0em;
-margin-left: 6.0em;
-margin-right: 6.0em;
+margin-left: 5.0em;
+margin-right: 5.0em;
 margin-bottom: 1.0em;
 border-radius: 25px;
 }
