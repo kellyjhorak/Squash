@@ -1,5 +1,3 @@
-
-
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -10,12 +8,14 @@
   font-style: normal;
 }
 
-body {
+html, body {
   background-color: #174785;
-  margin: 0; /* Remove default margins if needed */
+  width: 100%;
+  min-width: 100vw; /* Ensures it stretches across full viewport width */
+  margin: 0; /* Remove default margins */
   padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling issues */
 }
-
 
 @keyframes logo-spin {
   from {
@@ -40,9 +40,10 @@ body {
   color: #888;
 }
 
+/* Navbar */
 nav {
   position: fixed;
-  width: 100%;
+  width: 100vw; /* Forces full viewport width */
   top: 0;
   left: 0;
   background-color: #f7eed2;
@@ -78,32 +79,33 @@ nav ul li#logo img {
 }
 
 nav ul li a {
-  justify-content: right;
-   text-decoration: none;
-   color: #01638a;
-   font-size: 1.5em;
-   font-weight: bold;
-   padding: 15px 20px;
- }
+  text-decoration: none;
+  color: #01638a;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 15px 20px;
+}
 
 nav ul li a:hover {
   color: #982649;
 }
 
+/* Footer */
 footer {
-  background-color: #f7eed2;
-  color: #01638a;
-  text-align: center; 
-  padding: 0;
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100vw; /* Forces full viewport width */
   height: 40px;
-  box-sizing: border-box;
-  
-  /* Flexbox for vertical and horizontal  hahahahahahh testing lol lmao */
+  background-color: #f7eed2;
+  color: #01638a;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+}
+
+#main-content {
+  padding-top: 80px; /* or more, if needed */
 }
