@@ -138,7 +138,7 @@ export default function Homepage() {
         <header>
           <h1>PFAS Contamination Data</h1>
         </header>
-        <div className="Main_info"> 
+        <div id="main_info"> 
           <h2>What is a PFA?</h2>
           <p>PFAs (per- and polyfluoroalkyl sustance) are a category of man-made harmful chemicals. PFA's can be found in a wide variety of items, such as homewears, clothing, and medical equipment. These chemicals do not break down, so they find themselves in places like our watershed from dumping, manufacturing, and leaching. </p>
         </div>

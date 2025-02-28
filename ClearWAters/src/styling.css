@@ -109,3 +109,12 @@ footer {
 #main-content {
   padding-top: 80px; /* or more, if needed */
 }
+
+#main_info {
+Background-color: #71A2B6;
+padding : 2.0em;
+margin-left: 6.0em;
+margin-right: 6.0em;
+margin-bottom: 1.0em;
+border-radius: 25px;
+}
