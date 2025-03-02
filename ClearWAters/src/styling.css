@@ -53,7 +53,6 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-
 nav ul {
   list-style: none;
   display: flex;
@@ -197,4 +196,8 @@ border-radius: 25px;
   border: 2px solid #333;
   background-color: #fff;
   margin-top: 20px;
+}
+
+#resources-info{
+  padding-top: 100px;
 }
