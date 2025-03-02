@@ -15,6 +15,7 @@ const Resources = () => {
             <h1>Filtration Types</h1>
           <div className='filter'>
             <h2>Carbon-Based Filtration</h2>
+            <p>Filtration description...</p>
             <h3>Install Options:</h3>
             <ul>
               <li>
@@ -30,6 +31,7 @@ const Resources = () => {
           </div>
           <div className='filter'>
             <h2>Reverse Osmosis</h2>
+            <p>Filtration description...</p>
             <ul>
               <li>
               Point-of-Use (countertop or under the sink)
@@ -41,6 +43,7 @@ const Resources = () => {
           </div>
           <div className='filter'>
             <h2>Ion Exchange</h2>
+            <p>Filtration description...</p>
             <ul>
               <li>
               Point-of-Use (countertop or under the sink)
