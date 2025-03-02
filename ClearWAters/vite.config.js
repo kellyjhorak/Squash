@@ -1,7 +1,15 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    allowedHosts: ['clearwaters.serveo.net']
+    // Alternatively, allow any Serveo domain with:
+    // allowedHosts: ['.serveo.net']
+  }
 })
+server: {
+  allowedHosts: ['.serveo.net']
+}
