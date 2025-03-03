@@ -53,7 +53,7 @@ const Resources = () => {
                 </li>
               </ul>
             </div>  
-            <img src="/src/images/reverse-osmosis.png" alt="graphic of reverse osmosis" class="filter-image" />
+            <img src="/src/images/reverse-osmosis.png" alt="graphic of reverse osmosis filter" class="filter-image" />
           </div>
 
           <div className='filter'>
@@ -70,7 +70,7 @@ const Resources = () => {
                 </li>     
               </ul>
             </div>  
-            <img src="/src/images/ion-exchange-no-bg.png" alt="graphic of ion exchange" class="filter-image" />
+            <img src="/src/images/ion-exchange-no-bg.png" alt="graphic of ion exchange filter" class="filter-image" />
           </div>
 
         <Footer />

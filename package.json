@@ -10,6 +10,8 @@
   "license": "ISC",
   "keywords": [],
   "dependencies": {
-    "papaparse": "^5.5.2"
+    "leaflet": "^1.9.4",
+    "papaparse": "^5.5.2",
+    "react-leaflet": "^5.0.0"
   }
 }
