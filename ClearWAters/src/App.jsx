@@ -5,7 +5,8 @@ import Map from './Map';
 import Resources from './resources';
 
 {/*
-  this is a comment for sophia
+  this is a comment for firebase testing
+this is a comment for sophia
   this is a comment for kelly!!!!
   this is another comment for sophia
 */}
