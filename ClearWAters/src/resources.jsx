@@ -18,7 +18,9 @@ const Resources = () => {
           <div className='filter'>
             <div className='filter-content'>
               <h2>Carbon-Based Filtration</h2>
-              <p>Filtration description...</p>
+              <p>
+                Carbon filtration systems work by trapping chemicals through absorption. The activated carbon within the filter is porous, pulling in unwanted molecules, such as PFAS, and purifying water as it passes through.
+              </p>
               <h3>Install Options:</h3>
               <ul>
                 <li>
@@ -38,7 +40,9 @@ const Resources = () => {
           <div className='filter'>
             <div className='filter-content'> 
             <h2>Reverse Osmosis</h2>
-              <p>Filtration description...</p>
+              <p>
+              Reverse osmosis systems work by forcing water through a semipermeable membrane within the filter. The membrane has small pores, filtering out larger contaminants and trapping them within the membrane. The membrane effectively targets a wide range of PFAs, filtering and purifying water as it passes through the system.
+              </p>
               <h3>Install Options:</h3>
               <ul>
                 <li>
@@ -55,7 +59,7 @@ const Resources = () => {
           <div className='filter'>
             <div className='filter-content'>
             <h2>Ion Exchange</h2>   
-              <p>Filtration description...</p>
+              <p>Ion exchange works by utilizing positively charged resin beads to bind to negatively charged contaminants in the water. The resin beads work like magnets, attracting and preventing PFAs and other chemicals from passing through the filter.</p>
               <h3>Install Options:</h3>
               <ul>
                 <li>

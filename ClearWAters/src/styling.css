@@ -11,10 +11,10 @@
 html, body {
   background-color: #174785;
   width: 100%;
-  min-width: 100vw; /* Ensures it stretches across full viewport width */
-  margin: 0; /* Remove default margins */
+  min-width: 100vw; 
+  margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevents horizontal scrolling issues */
+  overflow-x: hidden;
 }
 
 @keyframes logo-spin {
@@ -43,7 +43,7 @@ html, body {
 /* Navbar */
 nav {
   position: fixed;
-  width: 100vw; /* Forces full viewport width */
+  width: 100vw;
   top: 0;
   left: 0;
   background-color: #f7eed2;
@@ -70,8 +70,8 @@ nav ul li {
 }
 
 nav ul li#logo img {
-  width: 200px;  /* Adjust the size as needed */
-  height: auto; /* Keeps the aspect ratio */
+  width: 200px; 
+  height: auto;
   padding-left: 20px; 
   padding-right: 20px;
   padding-top: 20px;
@@ -94,10 +94,10 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100vw; /* Forces full viewport width */
+  width: 100vw;
   height: 40px;
   background-color: #f7eed2;
-  color: #01638a;
+  color: #000000;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -115,6 +115,7 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 Background-color: #71A2B6;
+color: #000000;
 padding : 2.0em;
 margin-left: 5.0em;
 margin-right: 5.0em;
@@ -155,11 +156,11 @@ border-radius: 25px;
 }
 
 .big-number {
-  font-size: 70px; /* Keeps the number at full size */
+  font-size: 70px; 
 }
 
 .big-label {
-  font-size: 18px; /* 50% of the number size */
+  font-size: 18px; 
 }
 
 
@@ -167,8 +168,8 @@ border-radius: 25px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #2195f3ba; /* blue background */
-  color: #fff;
+  background-color: #2094f3ba;
+  color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -226,6 +227,7 @@ border-radius: 25px;
   justify-content: space-between; 
   align-items: flex-start;
   background-color: #71A2B6;
+  color: #000000;
   padding-top: 15px;
   padding-bottom: 30px;
   padding-left: 20px;
@@ -243,6 +245,10 @@ border-radius: 25px;
   align-items: flex-start;
   max-width: 60%;
 }
+
+.filter-content p {
+  text-align: left;
+}
  
 .filter ul {
   list-style-position: inside;
@@ -258,3 +264,5 @@ border-radius: 25px;
   object-fit: contain; 
   align-self: center; 
 }
+
+
