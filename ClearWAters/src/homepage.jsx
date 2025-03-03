@@ -122,7 +122,7 @@ export default function Homepage() {
       <Navbar />
       <div className="homepage">
         <header>
-          <h1>PFAS Contamination Data</h1>
+          <h1> County PFA Contamination Data</h1>
         </header>
         <div id="main_info" style={{ display: showData ? 'none' : 'block' }}>
           <h2>What is a PFA?</h2>
@@ -144,8 +144,8 @@ export default function Homepage() {
                 ))}
               </select>
               <button
+                id="go-button"
                 onClick={handleSearch}
-                style={{ fontSize: '1.2em', padding: '10px', marginLeft: '15px' }}
               >
                 GO
               </button>

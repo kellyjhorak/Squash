@@ -109,6 +109,7 @@ footer {
   padding-top: 80px; /* or more, if needed */
 }
 
+/* Styling for blurb on main page */
 #main_info {
 display: flex;
 justify-content: center;
@@ -178,10 +179,21 @@ border-radius: 25px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+#go-button {
+  font-size: 1em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: 20px;
+}
 /* Optional: Back button styling */
 .back-button {
   font-size: 1em;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-right: 15px;
 }
 
@@ -198,6 +210,51 @@ border-radius: 25px;
   margin-top: 20px;
 }
 
+/* Styling for blurb on resources page */
 #resources-info{
-  padding-top: 100px;
+  margin-top: 100px;
+  margin-left:5.0em;
+  margin-right: 5.0em;
+  padding : 2.0em;
+  background-color: #982649;
+  border-radius: 25px;
+}
+
+/* Styling for filter div*/
+.filter {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  background-color: #71A2B6;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 50px;
+  margin-bottom: 50px;
+  margin-left: 10.0em;
+  margin-right: 10.0em;
+  border-radius: 25px;
+}
+
+/* Styling for filter list */
+.filter-content{
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  max-width: 60%;
+}
+ 
+.filter ul {
+  list-style-position: inside;
+}
+
+.filter ul li {
+  text-align: left;
+}
+
+.filter-image {
+  max-height: 250px; 
+  max-width: 250px; 
+  object-fit: contain; 
+  align-self: center; 
 }
