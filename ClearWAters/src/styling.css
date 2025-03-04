@@ -37,7 +37,7 @@ html, body {
 }
 
 .read-the-docs {
-  color: #888;
+  color: #020202;
 }
 
 /* Navbar */
@@ -207,4 +207,19 @@ footer {
     padding: 1em;
     margin: 50px auto;
   }
+}
+
+/* Search Bar - Making it Bigger */
+.search-bar {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  margin-top: 10px;
+  max-width: 500px; 
+}
+
+.small-text {
+  color: black;
+  font-size: 0.8em; 
 }
