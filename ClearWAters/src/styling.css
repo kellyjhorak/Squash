@@ -236,9 +236,15 @@ border-radius: 25px;
 }
 
 /* Map page */ 
+
+
 .map-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin: 20px;
+  margin-left: 5.0em;
+  margin-right: 5.0em;
   padding: 10px;
   border: 3px;
   border-radius: 10px; 
@@ -247,8 +253,8 @@ border-radius: 25px;
 }
 
 .map {
-  height: 700px;
-  width: 1000px;
+  height: 600px;
+  width: 800px;
   max-width: 100%;
   position: relative;
 }
