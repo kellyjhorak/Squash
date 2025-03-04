@@ -131,7 +131,8 @@ border-radius: 25px;
 .pfas-container {
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-right: 100px;
 }
 
 .big-circle {
