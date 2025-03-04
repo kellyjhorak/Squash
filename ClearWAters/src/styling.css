@@ -135,8 +135,9 @@ border-radius: 25px;
 }
 
 .big-circle {
-  width: 200px !important; /* Force a fixed width */
-  height: 200px !important; /* Force a fixed height */
+  width: 180px;
+  height: 180px;
+  margin-left: 1.5rem;
   min-width: 200px;
   min-height: 200px;
   max-width: 200px;
@@ -157,6 +158,9 @@ border-radius: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-right: 3rem;
+  margin-top: 4rem;
+  width: 100%;
 }
 
 .big-number {
