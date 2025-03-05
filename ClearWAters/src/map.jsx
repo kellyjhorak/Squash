@@ -146,7 +146,7 @@ const MapComponent = () => {
         <div>
             <Navbar />
             <header>
-                <h1>PFAS Contamination Map</h1>
+                <h1 className='page-title'>PFA Contamination Map</h1>
             </header>
 
             {/* MAP COMPONENT */}

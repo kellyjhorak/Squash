@@ -248,6 +248,7 @@ border-radius: 25px;
 }
 
 /* Map page */ 
+
 .map-container {
   text-align: right;
   margin: 50px;
@@ -259,14 +260,14 @@ border-radius: 25px;
 }
 
 .map {
-  height: 700px;
+  height: 500px;
   width: 1200px;
   max-width: 100%;
   position: right inherit;
 } 
 
 .input-section {
-  margin-bottom: 15px;
+  margin-bottom: 100px;
   text-align: center;
 }
 
@@ -333,6 +334,7 @@ border-radius: 25px;
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 100px;
   color: black;
 }
 
