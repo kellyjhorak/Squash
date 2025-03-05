@@ -1,7 +1,8 @@
+
 #root {
-  /* max-width: 1280px; */
-  /* margin: 0 auto; */
-  /* padding: 2rem; */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
   font-family: "Maven Pro", sans-serif;
   font-optical-sizing: auto;
@@ -10,41 +11,99 @@
 
 html, body {
   background-color: #174785;
-  margin: -8px;
-  /* width: 100%; */
-  /* min-width: 100vw; */
-  /* overflow-x: hidden; */
-}
-
-/* Page main Divs */
-
-.page_container {
   width: 100%;
-  padding-bottom: 50px;
+  min-width: 100vw; 
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media screen and (max-width: 1024px) {
+  nav ul {
+    flex-direction: column;
+    padding: 10px 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map {
+    height: 500px;
+    width: 90%;
+  }
+
+  .comparison-section {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media screen and (max-width: 768px) {
+  nav ul li a {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  .big-circle {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .small-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+  }
+
+  .filter {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .filter-content {
+    max-width: 100%;
+    text-align: center;
   }
 }
 
-.card {
-  padding: 2em;
+@media screen and (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  .big-circle {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .small-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+  }
+
+  .map {
+    height: 300px;
+    width: 100%;
+  }
+
+  #county-select {
+    width: 90%;
+    font-size: 1em;
+  }
 }
 
-.read-the-docs {
-  color: #888;
-}
 
 /* Navbar */
 nav {
