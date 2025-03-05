@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
@@ -11,7 +10,7 @@ import water from './images/water.png';
 
 const dropletIcon = new L.Icon({
     iconUrl: water,
-    iconSize: [30, 30],
+    iconSize: [40, 40],
     iconAnchor: [15, 40],
     popupAnchor: [0, -40]
 });
@@ -147,7 +146,7 @@ const MapComponent = () => {
         <div>
             <Navbar />
             <header>
-                <h1 className='page-title'>PFAS Contamination Map</h1>
+                <h1>PFAS Contamination Map</h1>
             </header>
 
             {/* MAP COMPONENT */}
@@ -214,38 +213,46 @@ const MapComponent = () => {
                 )}
             </div>
 
-            {hasSelectedCounty && filteredData.length > 0 ? (
+            {/* DATA TABLE OR NO DATA MESSAGE */}
+            {hasSelectedCounty && (
                 <div className="water-quality-data">
                     <h2>Water Quality Data</h2>
-                    <button onClick={handleExportCSV} className="export-button">
-                        Export Data to CSV
-                    </button>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Water System</th>
-                                <th>Source</th>
-                                <th>Testing Date</th>
-                                <th>PFAS Measured</th>
-                                <th>Result</th>
-                                <th>State Action Level (SAL)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {filteredData.map((entry, index) => (
-                                <tr key={index}>
-                                    <td>{entry['Water System Name']}</td>
-                                    <td>{entry.Source}</td>
-                                    <td>{entry['Testing Date']}</td>
-                                    <td>{entry['PFAS Measured']}</td>
-                                    <td>{entry.Result}</td>
-                                    <td>{entry['State Action Level (SAL)'] || 'N/A'}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+
+                    {filteredData.length > 0 ? (
+                        <>
+                            <button onClick={handleExportCSV} className="export-button">
+                                Export Data to CSV
+                            </button>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Water System</th>
+                                        <th>Source</th>
+                                        <th>Testing Date</th>
+                                        <th>PFAS Measured</th>
+                                        <th>Result</th>
+                                        <th>State Action Level (SAL)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {filteredData.map((entry, index) => (
+                                        <tr key={index}>
+                                            <td>{entry['Water System Name']}</td>
+                                            <td>{entry.Source}</td>
+                                            <td>{entry['Testing Date']}</td>
+                                            <td>{entry['PFAS Measured']}</td>
+                                            <td>{entry.Result}</td>
+                                            <td>{entry['State Action Level (SAL)'] || 'N/A'}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </>
+                    ) : (
+                        <p className="no-data-message">No data available for the selected filters.</p>
+                    )}
                 </div>
-            ) : null}
+            )}
 
             <Footer />
         </div>
