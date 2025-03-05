@@ -189,6 +189,21 @@ border-radius: 25px;
   color: white;
 }
 
+.tooltip {
+  position: absolute;
+  font-size: small;
+  text-align: left;
+  background-color: #982649;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 1000;
+  transform: translate(-50%, -100%);
+  min-width: 150px;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
 #go-button {
   font-size: 1em;
   padding-top: 10px;
@@ -402,7 +417,7 @@ border-radius: 25px;
 
 /* Styling for blurb on resources page */
 #resources-info{
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left:5.0em;
   margin-right: 5.0em;
   padding : 2.0em;
@@ -456,17 +471,12 @@ border-radius: 25px;
   align-self: center; 
 }
 
-.tooltip {
-  position: absolute;
-  font-size: small;
-  text-align: left;
-  background-color: #982649;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  z-index: 1000;
-  transform: translate(-50%, -100%);
-  min-width: 150px;
-  max-width: 300px;
-  word-wrap: break-word;
+.video-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.page-title {
+  margin-top: 100px;
 }

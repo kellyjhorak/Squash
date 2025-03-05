@@ -6,6 +6,9 @@ const Resources = () => {
   return (
     <div>
         <Navbar />
+        <header>
+        <h1 className='page-title'>Filtration Types</h1>
+        </header>
 
         <div id='resources-info'>
           <p>
@@ -13,7 +16,8 @@ const Resources = () => {
           </p>
         </div>  
         
-        <div className='video-container' style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <div className='video-container'>
+          <div id='video-sep'></div>
           <iframe 
             width="560" 
             height="315" 
@@ -24,8 +28,6 @@ const Resources = () => {
             allowFullScreen
           ></iframe>
         </div>
-
-        <h1>Filtration Types</h1>
         
         <div className='filter'>
           <div className='filter-content'>
