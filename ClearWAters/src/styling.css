@@ -1,6 +1,5 @@
-styling css file 
-
-#root {
+styling css file: #root {
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -16,7 +15,6 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  text-align: center;
 }
 
 @keyframes logo-spin {
@@ -119,7 +117,7 @@ justify-content: center;
 flex-direction: column;
 Background-color: #71A2B6;
 color: #000000;
-padding : 0.3em;
+padding : 2.0em;
 margin-left: 5.0em;
 margin-right: 5.0em;
 margin-bottom: 1.0em;
@@ -130,14 +128,12 @@ border-radius: 25px;
 .pfas-container {
   display: flex;
   align-items: center;
-  margin-top: 20px;
-  margin-right: 100px;
+  margin: 20px 0;
 }
 
 .big-circle {
-  width: 180px;
-  height: 180px;
-  margin-left: 1.5rem;
+  width: 200px !important; /* Force a fixed width */
+  height: 200px !important; /* Force a fixed height */
   min-width: 200px;
   min-height: 200px;
   max-width: 200px;
@@ -158,9 +154,6 @@ border-radius: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-right: 3rem;
-  margin-top: 4rem;
-  width: 100%;
 }
 
 .big-number {
@@ -185,12 +178,6 @@ border-radius: 25px;
   text-align: center;
   padding: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.small-circle:hover {
-  background-color: #982649; /* Change to your desired hover color */
-  transition: background-color 0.3s ease; /* Optional: adds a smooth transition */
-  color: white;
 }
 
 #go-button {
@@ -225,28 +212,33 @@ border-radius: 25px;
   margin-top: 20px;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  color: #000000;
+  padding: 20px;
+}
 
 /* Map page */ 
 .map-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;        /* centers the container */
-  max-width: 90%;        /* limits the width to 90% of the viewport */
+  text-align: right;
+  margin: 50px;
   padding: 10px;
-  border: 3px solid transparent; /* specify a style if needed */
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border: 3px;
+  border-radius: 10px; 
+  background-color: #ffffff; 
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .map {
-  height: 600px;
-  width: 800px;
+  height: 700px;
+  width: 1000px;
   max-width: 100%;
-  position: relative;
-}
+  position: right inherit;
+} 
 
 .input-section {
   margin-bottom: 15px;
@@ -424,19 +416,4 @@ border-radius: 25px;
   max-width: 250px; 
   object-fit: contain; 
   align-self: center; 
-}
-
-.tooltip {
-  position: absolute;
-  font-size: small;
-  text-align: left;
-  background-color: #982649;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  z-index: 1000;
-  transform: translate(-50%, -100%);
-  min-width: 150px;
-  max-width: 300px;
-  word-wrap: break-word;
 }
