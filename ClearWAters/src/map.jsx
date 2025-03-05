@@ -1,22 +1,21 @@
+
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
+import Papa from 'papaparse';
 import 'leaflet/dist/leaflet.css';
 import Navbar from './navbar';
 import Footer from './Footer';
-import './styling.css'; 
-
+import './styling.css';
 import water from './images/water.png';
 
-// Custom droplet icon
 const dropletIcon = new L.Icon({
     iconUrl: water,
-    iconSize: [30, 30], 
+    iconSize: [30, 30],
     iconAnchor: [15, 40],
     popupAnchor: [0, -40]
 });
 
-// List of counties and coordinates
 const counties = {
     "Kitsap": [47.6476, -122.6413],
     "King": [47.6062, -122.3321],
@@ -25,37 +24,28 @@ const counties = {
     "Yakima": [46.6021, -120.5059]
 };
 
-// Example water quality data
-const waterQualityData = {
-    "Kitsap": { pH: 7.2, contaminants: "Lead, Nitrates", status: "Moderate" },
-    "King": { pH: 6.8, contaminants: "PFAS, Mercury", status: "High" },
-    "Pierce": { pH: 7.5, contaminants: "Arsenic, Chlorine", status: "Low" },
-    "Spokane": { pH: 7.0, contaminants: "Bacteria, Copper", status: "Moderate" },
-    "Yakima": { pH: 6.5, contaminants: "Nitrates, Fluoride", status: "High" }
-};
-
-// Default map settings
 const defaultCenter = [47.5, -120.5];
 const defaultZoom = 7;
 
-// Component to update the map view
-const MapUpdater = ({ center, zoom, resetTrigger }) => {
+const MapUpdater = ({ center, zoom }) => {
     const map = useMap();
-
-    React.useEffect(() => {
-        map.setView(center, zoom);
-    }, [center, zoom, resetTrigger]); // Reset when trigger updates
+    useEffect(() => {
+        if (center && zoom) {
+            setTimeout(() => {
+                map.setView(center, zoom, { animate: true });
+            }, 100);
+        }
+    }, [center, zoom, map]);
 
     return null;
 };
 
-// Reset Button Component (Inside Map)
 const ResetButton = ({ onReset }) => {
     const map = useMap();
 
     const handleClick = () => {
         onReset();
-        map.setView(defaultCenter, defaultZoom); // Reset map directly
+        map.setView(defaultCenter, defaultZoom);
     };
 
     return (
@@ -69,32 +59,88 @@ const MapComponent = () => {
     const [mapCenter, setMapCenter] = useState(defaultCenter);
     const [zoomLevel, setZoomLevel] = useState(defaultZoom);
     const [selectedCounty, setSelectedCounty] = useState('');
-    const [selectedWaterQuality, setSelectedWaterQuality] = useState(null);
-    const [resetTrigger, setResetTrigger] = useState(0); // Track reset actions
+    const [selectedWaterSystem, setSelectedWaterSystem] = useState('');
+    const [selectedPFAS, setSelectedPFAS] = useState('');
+    const [waterQualityData, setWaterQualityData] = useState([]);
+    const [filteredData, setFilteredData] = useState([]);
+    const [hasSelectedCounty, setHasSelectedCounty] = useState(false);
+    const [popupCounty, setPopupCounty] = useState(null);
+
+    useEffect(() => {
+        fetch('/DATA/home_map_dataset.csv')
+            .then(response => response.text())
+            .then(csvText => {
+                Papa.parse(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: (result) => {
+                        setWaterQualityData(result.data);
+                    }
+                });
+            });
+    }, []);
+
+    useEffect(() => {
+        if (!selectedCounty) {
+            setFilteredData([]);
+            return;
+        }
+
+        const data = waterQualityData.filter(entry =>
+            entry.County === selectedCounty &&
+            (selectedWaterSystem ? entry['Water System Name'] === selectedWaterSystem : true) &&
+            (selectedPFAS ? entry['PFAS Measured'] === selectedPFAS : true)
+        );
+
+        setFilteredData(data);
+    }, [selectedCounty, selectedWaterSystem, selectedPFAS, waterQualityData]);
 
     const handleCountyChange = (event) => {
         const county = event.target.value;
         setSelectedCounty(county);
+        setSelectedWaterSystem('');
+        setSelectedPFAS('');
+        setHasSelectedCounty(!!county);
+        setPopupCounty(county);
+
         if (counties[county]) {
             setMapCenter(counties[county]);
             setZoomLevel(10);
-            setSelectedWaterQuality(waterQualityData[county]); // Update water quality data
         }
     };
 
     const handleMarkerClick = (county, coords) => {
+        setSelectedCounty(county);
+        setSelectedWaterSystem('');
+        setSelectedPFAS('');
+        setHasSelectedCounty(true);
         setMapCenter(coords);
-        setZoomLevel(10); // Zoom in further when clicking a marker
-        setResetTrigger(prev => prev + 1); // Force MapUpdater to trigger update
-        setSelectedWaterQuality(waterQualityData[county]); // Show water quality data
+        setZoomLevel(10);
+        setPopupCounty(county);
     };
 
     const handleReset = () => {
         setSelectedCounty('');
+        setSelectedWaterSystem('');
+        setSelectedPFAS('');
+        setHasSelectedCounty(false);
         setMapCenter(defaultCenter);
         setZoomLevel(defaultZoom);
-        setResetTrigger(prev => prev + 1); // Force MapUpdater to trigger reset
-        setSelectedWaterQuality(null); // Clear water quality data
+        setPopupCounty(null);
+    };
+
+    const handleExportCSV = () => {
+        if (filteredData.length === 0) return;
+
+        const csv = Papa.unparse(filteredData);
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.setAttribute('href', url);
+        link.setAttribute('download', `${selectedCounty}_Water_Quality.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     return (
@@ -104,22 +150,10 @@ const MapComponent = () => {
                 <h1>PFAS Contamination Map</h1>
             </header>
 
-            {/* Dropdown menu */}
-            <div className="input-section">
-                <select value={selectedCounty} onChange={handleCountyChange}>
-                    <option value="">Select a County</option>
-                    {Object.keys(counties).map((county) => (
-                        <option key={county} value={county}>
-                            {county}
-                        </option>
-                    ))}
-                </select>
-            </div>
-
+            {/* MAP COMPONENT */}
             <div className="map-container">
-                {/* Map component */}
                 <MapContainer center={mapCenter} zoom={zoomLevel} className="map">
-                    <MapUpdater center={mapCenter} zoom={zoomLevel} resetTrigger={resetTrigger} />
+                    <MapUpdater center={mapCenter} zoom={zoomLevel} />
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -136,23 +170,83 @@ const MapComponent = () => {
                             <Popup>{county} County</Popup>
                         </Marker>
                     ))}
-
-                    {/* Reset Button inside MapContainer */}
                     <ResetButton onReset={handleReset} />
                 </MapContainer>
             </div>
 
-            {/* Water Quality Data Section */}
-            {selectedWaterQuality && (
+            {/* FILTERS MOVED BELOW THE MAP */}
+            <div className="input-section">
+                <select value={selectedCounty} onChange={handleCountyChange}>
+                    <option value="">Select a County</option>
+                    {Object.keys(counties).map((county) => (
+                        <option key={county} value={county}>
+                            {county}
+                        </option>
+                    ))}
+                </select>
+
+                {selectedCounty && (
+                    <select value={selectedWaterSystem} onChange={(e) => setSelectedWaterSystem(e.target.value)}>
+                        <option value="">Select Water System</option>
+                        {[...new Set(waterQualityData
+                            .filter(entry => entry.County === selectedCounty)
+                            .map(entry => entry['Water System Name'])
+                        )].map((system, index) => (
+                            <option key={index} value={system}>
+                                {system}
+                            </option>
+                        ))}
+                    </select>
+                )}
+
+                {selectedCounty && (
+                    <select value={selectedPFAS} onChange={(e) => setSelectedPFAS(e.target.value)}>
+                        <option value="">Select PFAS Type</option>
+                        {[...new Set(waterQualityData
+                            .filter(entry => entry.County === selectedCounty)
+                            .map(entry => entry['PFAS Measured'])
+                        )].map((pfas, index) => (
+                            <option key={index} value={pfas}>
+                                {pfas}
+                            </option>
+                        ))}
+                    </select>
+                )}
+            </div>
+
+            {hasSelectedCounty && filteredData.length > 0 ? (
                 <div className="water-quality-data">
-                    <h2>Water Quality in {selectedCounty} County</h2>
-                    <p><strong>pH Level:</strong> {selectedWaterQuality.pH}</p>
-                    <p><strong>Contaminants:</strong> {selectedWaterQuality.contaminants}</p>
-                    <p><strong>Status:</strong> {selectedWaterQuality.status}</p>
+                    <h2>Water Quality Data</h2>
+                    <button onClick={handleExportCSV} className="export-button">
+                        Export Data to CSV
+                    </button>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Water System</th>
+                                <th>Source</th>
+                                <th>Testing Date</th>
+                                <th>PFAS Measured</th>
+                                <th>Result</th>
+                                <th>State Action Level (SAL)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {filteredData.map((entry, index) => (
+                                <tr key={index}>
+                                    <td>{entry['Water System Name']}</td>
+                                    <td>{entry.Source}</td>
+                                    <td>{entry['Testing Date']}</td>
+                                    <td>{entry['PFAS Measured']}</td>
+                                    <td>{entry.Result}</td>
+                                    <td>{entry['State Action Level (SAL)'] || 'N/A'}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
-            )}    
-            
-             
+            ) : null}
+
             <Footer />
         </div>
     );

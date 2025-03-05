@@ -1,5 +1,3 @@
-
-
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -246,7 +244,7 @@ border-radius: 25px;
 
 .map {
   height: 700px;
-  width: 1000px;
+  width: 1200px;
   max-width: 100%;
   position: right inherit;
 } 
@@ -308,28 +306,57 @@ border-radius: 25px;
   color: black;
 }
 
-/* Dropdown styles */
-.compare-dropdowns select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
+/* Water Quality Data Section */
+.water-quality-data {
+  margin-top: 40px; /* Adds more space under the map */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
 }
 
-/* Comparison Table */
-.comparison-table {
+/* Water Quality Table Styling */
+.water-quality-data table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
 }
 
-.comparison-table th, .comparison-table td {
+.water-quality-data th, .water-quality-data td {
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 12px;
   text-align: center;
+  font-size: 16px; /* Increased font size for readability */
 }
 
-.comparison-table th {
+.water-quality-data th {
   background-color: #007BFF;
   color: white;
+}
+
+.water-quality-data tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.water-quality-data tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .water-quality-data {
+    padding: 15px;
+  }
+  
+  .water-quality-data th, .water-quality-data td {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
 
 /* Styling for filter div*/
