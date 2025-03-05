@@ -34,7 +34,7 @@ const PfasData = ({ countyInput, onBack }) => {
 
   // Load PFA descriptions dataset
   useEffect(() => {
-    Papa.parse('../../DATA/PFA-descriptions.csv', {
+    Papa.parse('../../DATA/NEW-PFA.csv', {
       header: true,
       download: true,
       skipEmptyLines: true,
