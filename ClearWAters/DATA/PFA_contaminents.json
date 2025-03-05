@@ -1,0 +1,332 @@
+[
+  {
+    "ID": 1,
+    "CompoundName": "PFBS",
+    "Description": "Perfluorobutanesulfonic acid (PFBS) is used as a replacement for PFOS in various industrial applications. Although considered less bioaccumulative than PFOS, studies indicate it may still persist in the environment and pose health risks such as endocrine disruption.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 2,
+    "CompoundName": "PFHxA",
+    "Description": "Perfluorohexanoic acid (PFHxA) is a short-chain PFAS commonly used in manufacturing. Its lower bioaccumulation potential does not eliminate concerns regarding its mobility in water and potential toxic effects on liver function and development.",
+    "StateActionLevel": 15.000
+  },
+  {
+    "ID": 3,
+    "CompoundName": "PFPeA",
+    "Description": "Perfluoropentanoic acid (PFPeA) is recognized for its high environmental mobility. It can rapidly spread in water systems, and emerging research suggests it may contribute to adverse health effects, including developmental toxicity.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 4,
+    "CompoundName": "PFHxS",
+    "Description": "Perfluorohexanesulfonic acid (PFHxS) is frequently found in firefighting foams and industrial processes. It is persistent in the environment and has been linked to immune and developmental toxicity, raising concerns about long-term exposure.",
+    "StateActionLevel": 20.000
+  },
+  {
+    "ID": 5,
+    "CompoundName": "PFOA",
+    "Description": "Perfluorooctanoic acid (PFOA) has been widely used in non-stick cookware and industrial applications. Known for its persistence and bioaccumulation, PFOA is associated with a range of health risks, including cancer, thyroid disease, and developmental issues.",
+    "StateActionLevel": 20.000
+  },
+  {
+    "ID": 6,
+    "CompoundName": "PFBA",
+    "Description": "Perfluorobutanoic acid (PFBA) is a short-chain PFAS with limited bioaccumulation. However, its widespread use in consumer products and industrial applications raises concerns over its potential to contaminate water sources and affect human health.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 7,
+    "CompoundName": "PFHpA",
+    "Description": "Perfluoroheptanoic acid (PFHpA) is detected in various environmental samples. Though data on its toxicity are still emerging, there is concern that it could contribute to similar adverse health effects as its longer-chain counterparts.",
+    "StateActionLevel": 15.000
+  },
+  {
+    "ID": 8,
+    "CompoundName": "PFOS",
+    "Description": "Perfluorooctanesulfonic acid (PFOS) has been historically used in firefighting foams and stain repellents. Its persistence in the environment and bioaccumulative nature make it dangerous, with links to immune system disruption and developmental problems.",
+    "StateActionLevel": 30.000
+  },
+  {
+    "ID": 9,
+    "CompoundName": "PFHpS",
+    "Description": "Perfluoroheptanesulfonic acid (PFHpS) is a lesser-studied PFAS compound. Early studies suggest it may have similar properties to PFOS, potentially impacting liver function and hormone regulation, though more research is needed to fully assess its risks.",
+    "StateActionLevel": 15.000
+  },
+  {
+    "ID": 10,
+    "CompoundName": "PFPes",
+    "Description": "Perfluoropentanesulfonic acid (PFPes) is currently under investigation for its environmental impact. Preliminary research indicates that, despite its shorter chain length, it may still contribute to toxic effects in wildlife and humans, particularly affecting hormonal balance.",
+    "StateActionLevel": 15.000
+  },
+  {
+    "ID": 11,
+    "CompoundName": "PFDA",
+    "Description": "Perfluorodecanoic acid (PFDA) is a long-chain PFAS commonly associated with industrial emissions. Its persistence and potential for bioaccumulation raise concerns about chronic exposure risks, including carcinogenicity and liver toxicity.",
+    "StateActionLevel": 20.000
+  },
+  {
+    "ID": 12,
+    "CompoundName": "PFUnDA",
+    "Description": "Perfluoroundecanoic acid (PFUnDA) is a long-chain PFAS found in various environmental matrices. Research indicates it may accumulate in living organisms and contribute to adverse health outcomes, such as developmental and immune system effects.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 13,
+    "CompoundName": "PFDoDA",
+    "Description": "Perfluorododecanoic acid (PFDoDA) is a long-chain PFAS with notable persistence in the environment. Its potential to bioaccumulate in both wildlife and humans is a cause for concern, with possible links to hormonal disruptions and other toxic effects.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 14,
+    "CompoundName": "PFOSA",
+    "Description": "Perfluorooctane sulfonamide (PFOSA) is a PFAS precursor that can break down into more persistent compounds. Used in the production of fluoropolymers, PFOSA poses risks due to its potential to convert into PFOS-like substances, which are known for their toxicity.",
+    "StateActionLevel": 30.000
+  },
+  {
+    "ID": 15,
+    "CompoundName": "GenX (HFPO-DA)",
+    "Description": "Hexafluoropropylene oxide dimer acid, known as GenX, is used as a replacement for PFOA. While designed to be less persistent, concerns remain regarding its environmental mobility and possible links to liver and developmental toxicity.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 16,
+    "CompoundName": "ADONA",
+    "Description": "Perfluoro-3,6-dioxaheptanoic acid (ADONA) is an alternative PFAS used in select industrial applications. Although it may have a lower bioaccumulation potential, its environmental fate and long-term health impacts are still being studied, with early signs pointing to potential toxic risks.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 17,
+    "CompoundName": "PFNA",
+    "Description": "Perfluorononanoic acid (PFNA) is a long-chain PFAS frequently detected in environmental samples. It is associated with adverse effects such as liver toxicity and endocrine disruption, and it is known for its persistence and bioaccumulative potential.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 18,
+    "CompoundName": "6:2 FTS",
+    "Description": "6:2 Fluorotelomer sulfonate (6:2 FTS) is used as a replacement for longer-chain PFAS. Although it is considered less bioaccumulative, its persistence and mobility in water raise concerns about environmental contamination and potential health impacts.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 19,
+    "CompoundName": "F-53B",
+    "Description": "F-53B is a chlorinated polyfluorinated ether sulfonate employed as an alternative to PFOS in some industrial applications. Its environmental persistence and potential bioaccumulative effects are currently under investigation.",
+    "StateActionLevel": 30.000
+  },
+  {
+    "ID": 20,
+    "CompoundName": "6:2 FTSA",
+    "Description": "6:2 Fluorotelomer sulfonamide (6:2 FTSA) is utilized in some industrial processes as a replacement for traditional PFAS. Its environmental behavior, including persistence and potential health impacts, is still being evaluated.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 21,
+    "CompoundName": "PFNS",
+    "Description": "Perfluorononane sulfonate (PFNS) is a long-chain PFAS compound detected in select environmental studies. It may share bioaccumulative and toxic properties similar to other long-chain sulfonates.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 22,
+    "CompoundName": "PFNA",
+    "Description": "Perfluorononanoic acid (PFNA) is a long-chain PFAS frequently detected in environmental samples. It is associated with adverse effects such as liver toxicity and endocrine disruption, and it is known for its persistence and bioaccumulative potential.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 23,
+    "CompoundName": "6:2 FTS",
+    "Description": "6:2 Fluorotelomer sulfonate (6:2 FTS) is used as a replacement for longer-chain PFAS. Although it is considered less bioaccumulative, its persistence and mobility in water raise concerns about environmental contamination and potential health impacts.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 24,
+    "CompoundName": "F-53B",
+    "Description": "F-53B is a chlorinated polyfluorinated ether sulfonate employed as an alternative to PFOS in some industrial applications. Its environmental persistence and potential bioaccumulative effects are currently under investigation.",
+    "StateActionLevel": 30.000
+  },
+  {
+    "ID": 25,
+    "CompoundName": "6:2 FTSA",
+    "Description": "6:2 Fluorotelomer sulfonamide (6:2 FTSA) is utilized in some industrial processes as a replacement for traditional PFAS. Its environmental behavior, including persistence and potential health impacts, is still being evaluated.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 26,
+    "CompoundName": "PFNS",
+    "Description": "Perfluorononane sulfonate (PFNS) is a long-chain PFAS compound detected in select environmental studies. It may share bioaccumulative and toxic properties similar to other long-chain sulfonates.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 27,
+    "CompoundName": "8:2 FTS",
+    "Description": "8:2 Fluorotelomer sulfonate (8:2 FTS) features an eight-carbon perfluorinated chain and is used as an alternative to legacy PFAS. Its persistence and mobility in water systems have raised environmental concerns.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 28,
+    "CompoundName": "8:2 FTOH",
+    "Description": "8:2 Fluorotelomer alcohol (8:2 FTOH) is a volatile precursor that can degrade into more stable PFAS compounds. Its presence in water is significant due to its potential contribution to overall PFAS contamination.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 29,
+    "CompoundName": "6:2 FTCA",
+    "Description": "6:2 Fluorotelomer carboxylic acid (6:2 FTCA) is formed as a degradation product of fluorotelomer alcohols. It is often detected in water systems and indicates industrial emissions and persistent contamination.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 30,
+    "CompoundName": "PFBS",
+    "Description": "Perfluorobutanesulfonic acid (PFBS) is used as a replacement for PFOS in various industrial applications. Although considered less bioaccumulative than PFOS, it may still persist in the environment and pose health risks such as endocrine disruption.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 31,
+    "CompoundName": "PFHxA",
+    "Description": "Perfluorohexanoic acid (PFHxA) is a short-chain PFAS commonly used in manufacturing. Its lower bioaccumulation potential does not eliminate concerns about its mobility in water and potential toxic effects.",
+    "StateActionLevel": 15.000
+  },
+  {
+    "ID": 32,
+    "CompoundName": "PFPeA",
+    "Description": "Perfluoropentanoic acid (PFPeA) is recognized for its high environmental mobility. It can rapidly spread in water systems, and emerging research suggests it may contribute to adverse health effects, including developmental toxicity.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 33,
+    "CompoundName": "PFHxS",
+    "Description": "Perfluorohexanesulfonic acid (PFHxS) is often found in firefighting foams and industrial processes. Persistent in the environment, it has been linked to immune and developmental toxicity.",
+    "StateActionLevel": 20.000
+  },
+  {
+    "ID": 34,
+    "CompoundName": "PFOA",
+    "Description": "Perfluorooctanoic acid (PFOA) has been widely used in non-stick cookware and industrial applications. Known for its persistence and bioaccumulation, it is associated with various health risks including cancer and developmental issues.",
+    "StateActionLevel": 20.000
+  },
+  {
+    "ID": 35,
+    "CompoundName": "PFBA",
+    "Description": "Perfluorobutanoic acid (PFBA) is a short-chain PFAS with limited bioaccumulation. Nonetheless, its widespread use raises concerns about contamination of water sources and potential health impacts.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 36,
+    "CompoundName": "PFHpA",
+    "Description": "Perfluoroheptanoic acid (PFHpA) is detected in many environmental samples. Although toxicity data is still emerging, there is concern that it could contribute to health effects similar to longer-chain PFAS.",
+    "StateActionLevel": 15.000
+  },
+  {
+    "ID": 37,
+    "CompoundName": "PFOS",
+    "Description": "Perfluorooctanesulfonic acid (PFOS) has historically been used in firefighting foams and stain repellents. Highly persistent and bioaccumulative, it is linked to immune system disruption and developmental problems.",
+    "StateActionLevel": 30.000
+  },
+  {
+    "ID": 38,
+    "CompoundName": "PFHpS",
+    "Description": "Perfluoroheptanesulfonic acid (PFHpS) is a lesser-studied PFAS compound. Early studies suggest possible toxicity similar to PFOS, potentially affecting liver function and hormonal regulation.",
+    "StateActionLevel": 15.000
+  },
+  {
+    "ID": 39,
+    "CompoundName": "PFPes",
+    "Description": "Perfluoropentanesulfonic acid (PFPes) is under investigation for its environmental impact. Despite its shorter chain, it may still contribute to endocrine disruption and other toxic effects.",
+    "StateActionLevel": 15.000
+  },
+  {
+    "ID": 40,
+    "CompoundName": "PFNA",
+    "Description": "Perfluorononanoic acid (PFNA) is a long-chain PFAS frequently detected in environmental samples. It is associated with endocrine disruption and liver toxicity, and is known to bioaccumulate.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 41,
+    "CompoundName": "6:2 FTS",
+    "Description": "6:2 Fluorotelomer sulfonate (6:2 FTS) is a short-chain replacement for longer-chain PFAS. While considered less bioaccumulative, it still raises concerns due to its persistence and mobility in water.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 42,
+    "CompoundName": "PFUnA",
+    "Description": "Perfluoroundecanoic acid (PFUnA) is monitored for its ability to accumulate in living organisms, potentially causing developmental and immune system disruptions similar to other long-chain PFAS.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 43,
+    "CompoundName": "PFDA",
+    "Description": "Perfluorodecanoic acid (PFDA) is a long-chain PFAS often linked to industrial emissions. It is highly persistent and bioaccumulative, with possible carcinogenic and liver toxicity risks.",
+    "StateActionLevel": 20.000
+  },
+  {
+    "ID": 44,
+    "CompoundName": "PFUnDA",
+    "Description": "Perfluoroundecanoic acid (PFUnDA) is another long-chain PFAS found in environmental matrices. Research indicates it may accumulate in organisms and cause adverse outcomes such as developmental and immune effects.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 45,
+    "CompoundName": "PFDoDA",
+    "Description": "Perfluorododecanoic acid (PFDoDA) is a long-chain PFAS with notable persistence. It can bioaccumulate in wildlife and humans, potentially causing hormonal disruptions and other toxic effects.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 46,
+    "CompoundName": "PFOSA",
+    "Description": "Perfluorooctane sulfonamide (PFOSA) is a PFAS precursor that can degrade into more persistent compounds. Used in fluoropolymer production, PFOSA can transform into PFOS-like substances with known toxicity.",
+    "StateActionLevel": 30.000
+  },
+  {
+    "ID": 47,
+    "CompoundName": "GenX (HFPO-DA)",
+    "Description": "Hexafluoropropylene oxide dimer acid, known as GenX, is a replacement for PFOA. Despite being designed to be less persistent, concerns remain regarding its environmental mobility and potential toxicity.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 48,
+    "CompoundName": "ADONA",
+    "Description": "Perfluoro-3,6-dioxaheptanoic acid (ADONA) is an alternative PFAS used in select industrial applications. Although it may have lower bioaccumulation, its long-term impacts are still under investigation.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 49,
+    "CompoundName": "F-53B",
+    "Description": "F-53B is a chlorinated polyfluorinated ether sulfonate used in some industrial settings as a substitute for PFOS. Its persistence and potential bioaccumulative effects are being studied.",
+    "StateActionLevel": 30.000
+  },
+  {
+    "ID": 50,
+    "CompoundName": "6:2 FTSA",
+    "Description": "6:2 Fluorotelomer sulfonamide (6:2 FTSA) is used in industrial processes as a replacement for older PFAS. Its environmental persistence and potential health impacts are not yet fully understood.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 51,
+    "CompoundName": "PFNS",
+    "Description": "Perfluorononane sulfonate (PFNS) is a long-chain sulfonate PFAS detected in certain environmental studies. It may share bioaccumulative and toxic properties similar to other long-chain PFAS.",
+    "StateActionLevel": 25.000
+  },
+  {
+    "ID": 52,
+    "CompoundName": "8:2 FTS",
+    "Description": "8:2 Fluorotelomer sulfonate (8:2 FTS) has an eight-carbon perfluorinated chain and is used as an alternative to legacy PFAS. Its persistence and mobility raise concerns for water systems.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 53,
+    "CompoundName": "8:2 FTOH",
+    "Description": "8:2 Fluorotelomer alcohol (8:2 FTOH) is a volatile precursor that can degrade into more stable PFAS. It is significant in water contamination due to its potential to form other PFAS compounds.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 54,
+    "CompoundName": "6:2 FTCA",
+    "Description": "6:2 Fluorotelomer carboxylic acid (6:2 FTCA) is formed as a degradation product of fluorotelomer alcohols. It often appears in water systems, indicating industrial emissions and persistent contamination.",
+    "StateActionLevel": 10.000
+  },
+  {
+    "ID": 55,
+    "CompoundName": "PFPeS",
+    "Description": "Perfluoropentanesulfonic acid (PFPeS) is investigated for its environmental impact. Despite being short-chain, it can still affect hormonal balance and contribute to contamination.",
+    "StateActionLevel": 15.000
+  }
+]
