@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
   text-align: center;
   font-family: "Maven Pro", sans-serif;
   font-optical-sizing: auto;
@@ -10,11 +10,17 @@
 
 html, body {
   background-color: #174785;
+  margin: -8px;
+  /* width: 100%; */
+  /* min-width: 100vw; */
+  /* overflow-x: hidden; */
+}
+
+/* Page main Divs */
+
+.page_container {
   width: 100%;
-  min-width: 100vw; 
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  padding-bottom: 50px;
 }
 
 @keyframes logo-spin {
@@ -42,10 +48,10 @@ html, body {
 
 /* Navbar */
 nav {
-  position: fixed;
-  width: 100vw;
+  width: 100%;
   top: 0;
   left: 0;
+  padding-top: 15px;
   background-color: #f7eed2;
   z-index: 1000;
   height: 80px;
@@ -122,6 +128,7 @@ padding : 2.0em;
 margin-left: 5.0em;
 margin-right: 5.0em;
 margin-bottom: 1.0em;
+
 border-radius: 25px;
 }
 
@@ -135,8 +142,9 @@ border-radius: 25px;
 }
 
 .big-circle {
-  width: 200px !important; /* Force a fixed width */
-  height: 200px !important; /* Force a fixed height */
+  width: 200px !important;
+  height: 200px !important; 
+  margin: 50px;
   min-width: 200px;
   min-height: 200px;
   max-width: 200px;
@@ -254,17 +262,30 @@ border-radius: 25px;
   margin: 50px;
   padding: 10px;
   border: 3px;
+  background-color: black;
   border-radius: 10px; 
   background-color: #ffffff; 
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .map {
-  height: 500px;
-  width: 1200px;
-  max-width: 100%;
-  position: right inherit;
+  height: 600px;
+  /* width:1820px;
+  max-width: 100%; */ */
+  /* position: right inherit; */
 } 
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .water-quality-data {
+    padding: 15px;
+  }
+  
+  .water-quality-data th, .water-quality-data td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
 
 .input-section {
   margin-bottom: 100px;
@@ -363,18 +384,6 @@ border-radius: 25px;
 
 .water-quality-data tbody tr:hover {
   background-color: #ddd;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .water-quality-data {
-    padding: 15px;
-  }
-  
-  .water-quality-data th, .water-quality-data td {
-    padding: 10px;
-    font-size: 14px;
-  }
 }
 
 /* Styling for filter div*/

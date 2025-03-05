@@ -188,41 +188,43 @@ export default function Homepage() {
   // List of counties based on your dataset
   const counties = ["Kitsap", "King", "Pierce", "Spokane", "Yakima"];
 
-  return (
-    <div>
-      <Navbar />
-      <div className="homepage">
-      <header>
-        <h1>{showData ? `${countyInput} PFA Contamination Data` : "County PFA Contamination Data"}</h1>
-      </header>
-        <div id="main_info" style={{ display: showData ? 'none' : 'block' }}>
-          <h2>What is a PFA?</h2>
-          <p>
-            PFAs (per- and polyfluoroalkyl substances) are man-made harmful chemicals found in a wide range of products.
-            They are persistent in the environment and can be released through manufacturing, waste disposal, and leaching.
-          </p>
-        </div>
-        <main>
-          {!showData ? (
-            <div className="input-section">
-              <select id="county-select" value={countyInput} onChange={handleSelectChange}>
-                <option value="">Select a County</option>
-                {counties.map(county => (
-                  <option key={county} value={county}>
-                    {county}
-                  </option>
-                ))}
-              </select>
-              <button id="go-button" onClick={handleSearch}>
-                GO
-              </button>
-            </div>
-          ) : (
-            <PfasData countyInput={countyInput} onBack={handleBack} />
-          )}
-        </main>
+  return ( 
+      <div className='page_container'>
+
+        <Navbar />
+
+        <header>
+          <h1 className='page-title'>{showData ? `${countyInput} PFA Contamination Data` : "County PFA Contamination Data"}</h1>
+        </header>
+        
+          <div id="main_info" style={{ display: showData ? 'none' : 'block' }}>
+            <h2>What is a PFA?</h2>
+            <p>
+              PFAs (per- and polyfluoroalkyl substances) are man-made harmful chemicals found in a wide range of products.
+              They are persistent in the environment and can be released through manufacturing, waste disposal, and leaching.
+            </p>
+          </div>
+          <main>
+            {!showData ? (
+              <div className="input-section">
+                <select id="county-select" value={countyInput} onChange={handleSelectChange}>
+                  <option value="">Select a County</option>
+                  {counties.map(county => (
+                    <option key={county} value={county}>
+                      {county}
+                    </option>
+                  ))}
+                </select>
+                <button id="go-button" onClick={handleSearch}>
+                  GO
+                </button>
+              </div>
+            ) : (
+              <PfasData countyInput={countyInput} onBack={handleBack} />
+            )}
+          </main>
+
+        <Footer />
       </div>
-      <Footer />
-    </div>
   );
 }

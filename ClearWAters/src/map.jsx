@@ -143,7 +143,7 @@ const MapComponent = () => {
     };
 
     return (
-        <div>
+        <div className='page_container'>
             <Navbar />
             <header>
                 <h1 className='page-title'>PFA Contamination Map</h1>

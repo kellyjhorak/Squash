@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 const Resources = () => {
   return (
-    <div>
+    <div className='page_container'>
         <Navbar />
         <header>
         <h1 className='page-title'>Filtration Types</h1>
