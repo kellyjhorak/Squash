@@ -92,7 +92,10 @@ const PfasData = ({ countyInput, onBack }) => {
     const containerRect = container.getBoundingClientRect();
     const x = rect.left + rect.width / 2 - containerRect.left;
     const y = rect.top - containerRect.top - 5;
-    const description = pfaDescriptions[pfaName];
+    
+    // Extract the compound name from PFAS Measured for matching
+    const compoundName = extractLabel(pfaName);
+    const description = pfaDescriptions[compoundName];
 
     if (description) {
       setTooltip({
