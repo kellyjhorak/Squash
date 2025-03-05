@@ -36,7 +36,7 @@ const PfasData = ({ countyInput, onBack }) => {
 
   // Load PFA descriptions from new JSON file (PFA_contaminents.json)
   useEffect(() => {
-    fetch('../../DATA/PFA_contaminents.json')
+    fetch('/../DATA/PFA_contaminents.json')
       .then(response => response.json())
       .then(jsonData => {
         // Create a lookup object by CompoundName
