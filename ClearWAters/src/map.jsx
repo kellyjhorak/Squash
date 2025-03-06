@@ -41,7 +41,6 @@ const MapUpdater = ({ center, zoom }) => {
 
 const ResetButton = ({ onReset }) => {
     const map = useMap();
-
     const handleClick = () => {
         onReset();
         map.setView(defaultCenter, defaultZoom);
@@ -65,20 +64,15 @@ const MapComponent = () => {
     const [hasSelectedCounty, setHasSelectedCounty] = useState(false);
     const [popupCounty, setPopupCounty] = useState(null);
 
+    // Load JSON instead of CSV
     useEffect(() => {
-        fetch('/DATA/home_map_dataset.csv')
-            .then(response => response.text())
-            .then(csvText => {
-                Papa.parse(csvText, {
-                    header: true,
-                    skipEmptyLines: true,
-                    complete: (result) => {
-                        setWaterQualityData(result.data);
-                    }
-                });
-            });
+        fetch('/DATA/home-map-final.json')
+            .then(response => response.json())
+            .then(data => setWaterQualityData(data))
+            .catch(error => console.error('Error loading JSON:', error));
     }, []);
 
+    // Filter data based on county, water system, and PFAS type
     useEffect(() => {
         if (!selectedCounty) {
             setFilteredData([]);
@@ -162,9 +156,7 @@ const MapComponent = () => {
                             key={county}
                             position={coords}
                             icon={dropletIcon}
-                            eventHandlers={{
-                                click: () => handleMarkerClick(county, coords)
-                            }}
+                            eventHandlers={{ click: () => handleMarkerClick(county, coords) }}
                         >
                             <Popup>{county} County</Popup>
                         </Marker>
@@ -217,7 +209,6 @@ const MapComponent = () => {
             {hasSelectedCounty && (
                 <div className="water-quality-data">
                     <h2>Water Quality Data</h2>
-
                     {filteredData.length > 0 ? (
                         <>
                             <button onClick={handleExportCSV} className="export-button">
@@ -253,7 +244,6 @@ const MapComponent = () => {
                     )}
                 </div>
             )}
-
             <Footer />
         </div>
     );
