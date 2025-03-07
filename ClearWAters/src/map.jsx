@@ -7,6 +7,7 @@ import Navbar from './navbar';
 import Footer from './Footer';
 import './styling.css';
 import water from './images/water.png';
+import map_data from '../DATA/home-map-final.json';
 
 const dropletIcon = new L.Icon({
     iconUrl: water,
