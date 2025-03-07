@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './navbar';
 import Footer from './Footer';
+import data from '../DATA/home-map-final.json';
+import pfaDescriptionsData from '../DATA/PFA_contaminents.json';
 
 const PfasData = ({ countyInput, onBack }) => {
-  const [data, setData] = useState([]);
   const [pfaDescriptions, setPfaDescriptions] = useState({});
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [tooltip, setTooltip] = useState({
     visible: false,
     content: null,
@@ -14,43 +13,14 @@ const PfasData = ({ countyInput, onBack }) => {
     y: 0
   });
 
-  // Load main dataset from JSON (home-map-final.json)
   useEffect(() => {
-    setLoading(true);
-    fetch('../../DATA/home-map-final.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
-        return response.json();
-      })
-      .then(jsonData => {
-        setData(jsonData);
-        setLoading(false);
-      })
-      .catch(err => {
-        setError(err);
-        setLoading(false);
-      });
+    // Create a lookup object by CompoundName
+    const mapping = {};
+    pfaDescriptionsData.forEach(item => {
+      mapping[item.CompoundName] = item;
+    });
+    setPfaDescriptions(mapping);
   }, []);
-
-  // Load PFA descriptions from new JSON file (PFA_contaminents.json)
-  useEffect(() => {
-    fetch('/../DATA/PFA_contaminents.json')
-      .then(response => response.json())
-      .then(jsonData => {
-        // Create a lookup object by CompoundName
-        const mapping = {};
-        jsonData.forEach(item => {
-          mapping[item.CompoundName] = item;
-        });
-        setPfaDescriptions(mapping);
-      })
-      .catch(err => console.error('Error loading PFA descriptions:', err));
-  }, []);
-
-  if (loading) return <p>Loading data...</p>;
-  if (error) return <p>Error: {error.message}</p>;
 
   // Filter for selected county
   const filteredData = data.filter(item => item.County === countyInput);
@@ -58,7 +28,6 @@ const PfasData = ({ countyInput, onBack }) => {
     return <p className="no-results">No data found for "{countyInput}"</p>;
   }
 
-  // Parse the date in MM/DD/YY format
   const parseDate = (dateString) => {
     const parts = dateString.split('/');
     let year = parts[2];
@@ -68,13 +37,11 @@ const PfasData = ({ countyInput, onBack }) => {
     return new Date(year, parts[0] - 1, parts[1]);
   };
 
-  // Helper to extract PFAS label (removes parentheses)
   const extractLabel = (pfasName) => {
     const match = pfasName.match(/\(([^)]+)\)/);
     return match ? match[1] : pfasName;
   };
 
-  // Group by PFAS Measured and pick the most recent Testing Date
   const mostRecentDataByPFAS = filteredData.reduce((acc, curr) => {
     const pfa = curr["PFAS Measured"];
     const currDate = parseDate(curr["Testing Date"]);
@@ -85,25 +52,18 @@ const PfasData = ({ countyInput, onBack }) => {
   }, {});
   const mostRecentData = Object.values(mostRecentDataByPFAS);
 
-  // Tooltip handler when hovering over small circles
   const handleMouseEnter = (e, pfaName) => {
     const rect = e.target.getBoundingClientRect();
     const container = document.getElementById('tooltip-container');
     const containerRect = container.getBoundingClientRect();
     const x = rect.left + rect.width / 2 - containerRect.left;
     const y = rect.top - containerRect.top - 5;
-    
-    // Extract the compound name from PFAS Measured for matching
+
     const compoundName = extractLabel(pfaName);
     const description = pfaDescriptions[compoundName];
 
     if (description) {
-      setTooltip({
-        visible: true,
-        content: description,
-        x,
-        y
-      });
+      setTooltip({ visible: true, content: description, x, y });
     }
   };
 
@@ -196,9 +156,7 @@ export default function Homepage() {
                 </option>
               ))}
             </select>
-            <button id="go-button" onClick={handleSearch}>
-              GO
-            </button>
+            <button id="go-button" onClick={handleSearch}>GO</button>
           </div>
         ) : (
           <PfasData countyInput={countyInput} onBack={handleBack} />
