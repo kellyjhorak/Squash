@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
+import Papa from 'papaparse';
 import 'leaflet/dist/leaflet.css';
 import Navbar from './navbar';
 import Footer from './Footer';
@@ -54,16 +55,23 @@ const ResetButton = ({ onReset }) => {
 };
 
 const MapComponent = () => {
-    // Use the imported JSON data directly
-    const [waterQualityData] = useState(map_data);
     const [mapCenter, setMapCenter] = useState(defaultCenter);
     const [zoomLevel, setZoomLevel] = useState(defaultZoom);
     const [selectedCounty, setSelectedCounty] = useState('');
     const [selectedWaterSystem, setSelectedWaterSystem] = useState('');
     const [selectedPFAS, setSelectedPFAS] = useState('');
+    const [waterQualityData, setWaterQualityData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
     const [hasSelectedCounty, setHasSelectedCounty] = useState(false);
     const [popupCounty, setPopupCounty] = useState(null);
+
+    // Load JSON instead of CSV
+    useEffect(() => {
+        fetch('/DATA/home-map-final.json')
+            .then(response => response.json())
+            .then(data => setWaterQualityData(data))
+            .catch(error => console.error('Error loading JSON:', error));
+    }, []);
 
     // Filter data based on county, water system, and PFAS type
     useEffect(() => {
@@ -115,24 +123,10 @@ const MapComponent = () => {
         setPopupCounty(null);
     };
 
-    // Simple CSV conversion function
-    const convertToCSV = (data) => {
-        if (!data || !data.length) return '';
-        const keys = Object.keys(data[0]);
-        const csvRows = [];
-        // Header row
-        csvRows.push(keys.join(','));
-        // Data rows
-        data.forEach(row => {
-            csvRows.push(keys.map(key => `"${row[key]}"`).join(','));
-        });
-        return csvRows.join('\n');
-    };
-
     const handleExportCSV = () => {
         if (filteredData.length === 0) return;
 
-        const csv = convertToCSV(filteredData);
+        const csv = Papa.unparse(filteredData);
         const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
@@ -257,3 +251,4 @@ const MapComponent = () => {
 };
 
 export default MapComponent;
+
