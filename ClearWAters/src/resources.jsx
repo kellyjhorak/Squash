@@ -1,6 +1,9 @@
 import React from 'react';
 import Navbar from './navbar';
 import Footer from './Footer';
+import carbonFiltration from '/img/carbon-filtration.png';
+import reverseOsmosis from '/img/reverse-osmosis.png';
+import ionExchange from '/img/ion-exchange-no-bg.png';
 
 const Resources = () => {
   return (
@@ -42,7 +45,7 @@ const Resources = () => {
               <li>Inline Filter for Fridge/Water Dispenser</li>
             </ul> 
           </div>
-          <img src="images/carbon-filtration.png" alt="graphic of carbon filter" className="filter-image" />
+          <img src={carbonFiltration} alt="graphic of carbon filter" className="filter-image" />
         </div>
 
         <div className='filter'>
@@ -57,7 +60,7 @@ const Resources = () => {
               <li>Inline Filter for Fridge/Water Dispenser</li>
             </ul>
           </div>  
-          <img src="images/reverse-osmosis.png" alt="graphic of reverse osmosis filter" className="filter-image" />
+          <img src={reverseOsmosis} alt="graphic of reverse osmosis filter" className="filter-image" />
         </div>
 
         <div className='filter'>
@@ -72,7 +75,7 @@ const Resources = () => {
               <li>Whole-House Filtration System</li>     
             </ul>
           </div>  
-          <img src="images/ion-exchange-no-bg.png" alt="graphic of ion exchange filter" className="filter-image" />
+          <img src={ionExchange} alt="graphic of ion exchange filter" className="filter-image" />
         </div>
 
         <Footer />
