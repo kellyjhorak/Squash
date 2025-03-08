@@ -3,48 +3,130 @@
   font-family: "Maven Pro", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-}
-
-html, body {
+ }
+ 
+ html, body {
   background-color: #174785;
   margin: -8px;
-
-}
-
-.page_container {
+ }
+ 
+ .page_container {
   width: 100%;
-  min-width: 100vw; 
+  min-width: 100vw;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   padding-bottom: 50px;
-}
-
-@keyframes logo-spin {
+ }
+ 
+ 
+ @keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
+ }
+ 
+ 
+ @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
+ }
+ 
+ .card {
   padding: 2em;
-}
-
-.read-the-docs {
+ }
+ 
+ .read-the-docs {
   color: #888;
+ }
+ 
+ @media screen and (max-width: 1024px) {
+
+  nav ul {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comparison-section {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
-/* Navbar */
-nav {
+@media screen and (max-width: 768px) {
+
+  nav ul li a {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  .big-circle {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .small-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+  }
+
+  .filter {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .filter-content {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  .big-circle {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .small-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+  }
+
+  #county-select {
+    width: 90%;
+    font-size: 1em;
+  }
+}
+
+
+
+
+ /* Navbar */
+ nav {
   width: 100%;
   top: 0;
   left: 0;
@@ -55,9 +137,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-nav ul {
+ }
+ 
+ nav ul {
   list-style: none;
   display: flex;
   align-items: center;
@@ -66,35 +148,38 @@ nav ul {
   justify-content: space-evenly;
   width: 100%;
   padding: 0;
-}
-
-nav ul li {
+ }
+ 
+ nav ul li {
   flex-grow: 1;
   text-align: center;
-}
-
-nav ul li#logo img {
-  width: 200px; 
+ }
+ 
+ nav ul li#logo img {
+  width: 200px;
   height: auto;
-  padding-left: 20px; 
+  padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
-}
-
-nav ul li a {
+ }
+ 
+ 
+ nav ul li a {
   text-decoration: none;
   color: black;
   font-size: 1.5em;
   font-weight: bold;
   padding: 15px 20px;
-}
-
-nav ul li a:hover {
+ }
+ 
+ nav ul li a:hover {
   color: #982649;
-}
+ }
 
-/* Footer */
-footer {
+ 
+ /* Footer */
+
+ footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -107,41 +192,42 @@ footer {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-}
+ }
+ 
+ 
+ /* Main page */
 
-/* Main page */
-
-#main-content {
+ #main-content {
   padding-top: 80px;
   padding-bottom: 40px;
-}
-
-#main_info {
-display: flex;
-justify-content: center;
-flex-direction: column;
-Background-color: #71A2B6;
-color: #000000;
-padding : 2.0em;
-margin-left: 5.0em;
-margin-right: 5.0em;
-margin-bottom: 1.0em;
-
-border-radius: 25px;
-}
-
-/* PFAS Data display styling */
-.pfas-container {
+ }
+ 
+ #main_info {
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ Background-color: #71A2B6;
+ color: #000000;
+ padding : 2.0em;
+ margin-left: 5.0em;
+ margin-right: 5.0em;
+ margin-bottom: 1.0em;
+ border-radius: 25px;
+ }
+ 
+ 
+ /* PFAS Data display styling */
+ .pfas-container {
   display: flex;
   align-items: center;
   margin: 20px 0;
   margin-top: 20px;
   margin-right: 100px;
-}
-
-.big-circle {
+ }
+ 
+ .big-circle {
   width: 200px !important;
-  height: 200px !important; 
+  height: 200px !important;
   margin: 50px;
   min-width: 200px;
   min-height: 200px;
@@ -157,23 +243,23 @@ border-radius: 25px;
   text-align: center;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   flex-shrink: 0;
-}
-
-.small-circles-container {
+ }
+ 
+ .small-circles-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.big-number {
-  font-size: 70px; 
-}
-
-.big-label {
-  font-size: 18px; 
-}
-
-.small-circle {
+ }
+ 
+ .big-number {
+  font-size: 70px;
+ }
+ 
+ .big-label {
+  font-size: 18px;
+ }
+ 
+ .small-circle {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -187,15 +273,14 @@ border-radius: 25px;
   text-align: center;
   padding: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.small-circle:hover {
-  background-color: #982649; /* Change to your desired hover color */
-  transition: background-color 0.3s ease; /* Optional: adds a smooth transition */
-  color: white;
-}
-
-.tooltip {
+ }
+ 
+ .small-circle:hover {
+  background-color: #982649; 
+  transition: background-color 0.3s ease; 
+ }
+ 
+ .tooltip {
   position: absolute;
   font-size: small;
   text-align: left;
@@ -208,29 +293,27 @@ border-radius: 25px;
   min-width: 150px;
   max-width: 300px;
   word-wrap: break-word;
-}
-
-#go-button {
+ }
+ 
+ #go-button {
   font-size: 1em;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 30px;
   padding-right: 30px;
   margin-left: 20px;
-}
-
-/* Optional: Back button styling */
-.back-button {
+ }
+ 
+ .back-button {
   font-size: 1em;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 25px;
   padding-right: 25px;
   margin-right: 15px;
-}
-
-
-#county-select {
+ }
+ 
+ #county-select {
   font-size: 1.5em;
   color: black;
   font-display: center;
@@ -241,9 +324,9 @@ border-radius: 25px;
   border: 2px solid #333;
   background-color: #fff;
   margin-top: 20px;
-}
-
-.main-container {
+ }
+ 
+ .main-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -251,67 +334,62 @@ border-radius: 25px;
   gap: 20px;
   color: #000000;
   padding: 20px;
-}
-
-/* Map page */ 
-
-.map-container {
+ }
+ 
+ 
+ /* Map page */
+ 
+ .map-container {
   text-align: right;
   margin: 50px;
   padding: 10px;
   border: 3px;
   background-color: black;
-  border-radius: 10px; 
-  background-color: #ffffff; 
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
-}
-
-.map {
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+ }
+ 
+ .map {
   height: 600px;
-  /* width:1820px;
-  max-width: 100%; */ 
-  /* position: right inherit; */
-} 
+ }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) {
   .water-quality-data {
     padding: 15px;
   }
-  
-  .water-quality-data th, .water-quality-data td {
+   .water-quality-data th, .water-quality-data td {
     padding: 10px;
     font-size: 14px;
   }
-}
-
-.input-section {
+ }
+ 
+ .input-section {
   margin-bottom: 100px;
   text-align: center;
-}
-
-.input-section select {
-  padding: 15px; 
+ }
+ 
+ .input-section select {
+  padding: 15px;
   font-display: center;
-  font-size: 1.2em; 
+  font-size: 1.2em;
   border: 2px solid #333;
-  border-radius: 8px; 
-  background-color: white; 
-  color: black; 
+  border-radius: 8px;
+  background-color: white;
+  color: black;
   cursor: pointer;
-  width: 250px; 
+  width: 250px;
   margin: 5px;
-}
-
-
-/* Style on hover and focus */
-.input-section select:hover, 
-.input-section select:focus {
-  background-color: #f0f0f0; 
-  outline: none; 
-}
-
-.reset-button {
+ }
+ 
+ /* Style on hover and focus */
+ .input-section select:hover,
+ .input-section select:focus {
+  background-color: #f0f0f0;
+  outline: none;
+ }
+ 
+ .reset-button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -323,19 +401,17 @@ border-radius: 25px;
   font-size: 14px;
   border-radius: 5px;
   color: black;
-}
-
-.reset-button:hover {
+ }
+ 
+ .reset-button:hover {
   background-color: #f0f0f0;
-}
-
-/* Left side (Map) */
-.map-section {
+ }
+ 
+ .map-section {
   flex: 2;
-}
+ }
 
-/* Right side (Comparison) */
-.comparison-section {
+ .comparison-section {
   flex: 1;
   background: #f8f9fa;
   padding: 15px;
@@ -343,11 +419,10 @@ border-radius: 25px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin-left: auto;
   color: black;
-}
-
-/* Water Quality Data Section */
-.water-quality-data {
-  margin-top: 40px; /* Adds more space under the map */
+ }
+ 
+ .water-quality-data {
+  margin-top: 40px;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -358,39 +433,39 @@ border-radius: 25px;
   margin-right: auto;
   margin-bottom: 100px;
   color: black;
-}
-
-/* Water Quality Table Styling */
-.water-quality-data table {
+ }
+ 
+ .water-quality-data table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-}
-
-.water-quality-data th, .water-quality-data td {
+ }
+ 
+ .water-quality-data th, .water-quality-data td {
   border: 1px solid #ccc;
   padding: 12px;
   text-align: center;
-  font-size: 16px; /* Increased font size for readability */
-}
-
-.water-quality-data th {
+  font-size: 16px;
+ }
+ 
+ .water-quality-data th {
   background-color: #007BFF;
   color: white;
-}
-
-.water-quality-data tbody tr:nth-child(even) {
+ }
+ 
+ .water-quality-data tbody tr:nth-child(even) {
   background-color: #f2f2f2;
-}
-
-.water-quality-data tbody tr:hover {
+ }
+ 
+ 
+ .water-quality-data tbody tr:hover {
   background-color: #ddd;
-}
-
-/* Styling for filter div*/
-.filter {
+ }
+ 
+ /* Styling for filter div*/
+ .filter {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: flex-start;
   background-color: #71A2B6;
   padding-top: 15px;
@@ -401,95 +476,96 @@ border-radius: 25px;
   margin-left: 10.0em;
   margin-right: 10.0em;
   border-radius: 25px;
-}
-
-/* Styling for filter list */
-.filter-content {
+ }
+ 
+ /* Styling for filter list */
+ .filter-content {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: flex-start;
   max-width: 60%;
-}
-
-.filter ul {
+ }
+ 
+ .filter ul {
   list-style-position: inside;
-}
-
-.filter ul li {
+ }
+ 
+ .filter ul li {
   text-align: left;
-}
-
-.filter-image {
-  max-height: 250px; 
-  max-width: 250px; 
-  object-fit: contain; 
-  align-self: center; 
-}
-
-/* Resource page */ 
-
-/* Styling for blurb on resources page */
-#resources-info{
+ }
+ 
+ .filter-image {
+  max-height: 250px;
+  max-width: 250px;
+  object-fit: contain;
+  align-self: center;
+ }
+ 
+ 
+ /* Resource page */
+ 
+ /* Styling for blurb on resources page */
+ #resources-info{
   margin-top: 50px;
-  margin-left:5.0em;
+  margin-left: 5.0em;
   margin-right: 5.0em;
   padding : 2.0em;
   background-color: #982649;
   border-radius: 25px;
-}
-
-/* Styling for filter div*/
-.filter {
+ }
+ 
+ /* Styling for filter div*/
+ .filter {
   display: flex;
-  justify-content: space-between; 
-  align-items: flex-start;
+  justify-content: center; 
   background-color: #71A2B6;
   padding-top: 15px;
   padding-bottom: 30px;
   padding-left: 20px;
-  padding-right: 50px;
+  padding-right: 20px;
   margin-bottom: 50px;
-  margin-left: 10.0em;
-  margin-right: 10.0em;
+  margin-left: 5.0em;
+  margin-right: 5.0em;
   border-radius: 25px;
-}
-
-/* Styling for filter list */
-.filter-content {
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-start;
-  max-width: 60%;
-  color:#000000;
-}
-
-/* Styling for filter descriptions */
-.filter-content {
-  text-align: left;
-}
+ }
  
-.filter ul {
-  list-style-position: inside;
-}
-
-.filter ul li {
+ /* Styling for filter list */
+ .filter-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 80%;
+  color:#000000;
+ }
+ 
+ /* Styling for filter descriptions */
+ .filter-content {
   text-align: left;
-}
+ }
 
-/* Styling for filter images */
-.filter-image {
-  max-height: 250px; 
-  max-width: 250px; 
-  object-fit: contain; 
-  align-self: center; 
-}
-
-.video-container {
+ .filter ul {
+  list-style-position: inside;
+ }
+ 
+ .filter ul li {
+  text-align: left;
+ }
+ 
+ /* Styling for filter images */
+ .filter-image {
+  max-height: 250px;
+  max-width: 250px;
+  object-fit: contain;
+  align-self: center;
+ }
+ 
+ .video-container {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
-}
-
-.page-title {
+ }
+ 
+ .page-title {
   margin-top: 100px;
-}
+ }
+ 
