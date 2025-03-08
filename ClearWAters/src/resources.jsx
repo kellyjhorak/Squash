@@ -42,7 +42,7 @@ const Resources = () => {
               <li>Inline Filter for Fridge/Water Dispenser</li>
             </ul> 
           </div>
-          <img src="/src/images/carbon-filtration.png" alt="graphic of carbon filter" className="filter-image" />
+          <img src="images/carbon-filtration.png" alt="graphic of carbon filter" className="filter-image" />
         </div>
 
         <div className='filter'>
@@ -57,7 +57,7 @@ const Resources = () => {
               <li>Inline Filter for Fridge/Water Dispenser</li>
             </ul>
           </div>  
-          <img src="/src/images/reverse-osmosis.png" alt="graphic of reverse osmosis filter" className="filter-image" />
+          <img src="images/reverse-osmosis.png" alt="graphic of reverse osmosis filter" className="filter-image" />
         </div>
 
         <div className='filter'>
@@ -72,7 +72,7 @@ const Resources = () => {
               <li>Whole-House Filtration System</li>     
             </ul>
           </div>  
-          <img src="/src/images/ion-exchange-no-bg.png" alt="graphic of ion exchange filter" className="filter-image" />
+          <img src="images/ion-exchange-no-bg.png" alt="graphic of ion exchange filter" className="filter-image" />
         </div>
 
         <Footer />
