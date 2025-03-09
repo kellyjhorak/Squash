@@ -9,6 +9,10 @@
   background-color: #174785;
   margin: -8px;
  }
+
+ .hidden {
+  display: none;
+ }
  
  .page_container {
   width: 100%;
@@ -43,6 +47,7 @@
  .read-the-docs {
   color: #888;
  }
+
  
  @media screen and (max-width: 1024px) {
 
@@ -59,6 +64,29 @@
   .comparison-section {
     width: 100%;
     margin-left: 0;
+  }
+
+  #full-menu {
+    display: none;
+  }
+
+  #hamburger-button {
+    display: inline;
+    width: 50px;
+  }
+
+  #hamburger-menu {
+    display: inline;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 15px;
+    background-color: #f7eed2;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 

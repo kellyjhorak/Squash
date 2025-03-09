@@ -25,7 +25,7 @@ const Resources = () => {
             width="560" 
             height="315" 
             src="https://www.youtube.com/embed/cX7kkk703sw" 
-            title="YouTube video player" 
+            title="a short video about PFAS and filtration systems that can help limit exposire" 
             frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowFullScreen
