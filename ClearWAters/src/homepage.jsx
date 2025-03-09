@@ -136,7 +136,7 @@ export default function Homepage() {
     <div className='page_container'>
       <Navbar />
       <header>
-        <h1 className='page-title'>{showData ? `${countyInput} PFA Data` : "County PFA Data"}</h1>
+        <h1 className='page-title'>{showData ? `${countyInput} County PFA Data` : "County PFA Data"}</h1>
       </header>
       <div id="main_info" style={{ display: showData ? 'none' : 'block' }}>
         <h2>What is a PFA?</h2>
