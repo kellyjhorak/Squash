@@ -14,7 +14,6 @@ const PfasData = ({ countyInput, onBack }) => {
   });
 
   useEffect(() => {
-    // Create a lookup object by CompoundName
     const mapping = {};
     pfaDescriptionsData.forEach(item => {
       mapping[item.CompoundName] = item;
@@ -22,7 +21,6 @@ const PfasData = ({ countyInput, onBack }) => {
     setPfaDescriptions(mapping);
   }, []);
 
-  // Filter for selected county
   const filteredData = data.filter(item => item.County === countyInput);
   if (filteredData.length === 0) {
     return <p className="no-results">No data found for "{countyInput}"</p>;

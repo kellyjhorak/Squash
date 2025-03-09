@@ -1,3 +1,5 @@
+/* Main CSS */
+
 #root {
   text-align: center;
   font-family: "Maven Pro", sans-serif;
@@ -39,7 +41,8 @@ html, body {
   padding-bottom: 50px;
 }
  
- 
+/* Media Queries */
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -65,7 +68,7 @@ html, body {
 }
 
 
- @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 
   nav ul {
     flex-direction: column;
@@ -97,9 +100,9 @@ html, body {
 
   #mini-logo {
     display: block;
-  }
+}
 
-  #mini-menu-bar{
+  #mini-menu-bar {
     display: flex;
     background-color: #f7eed2;
     justify-content: space-between;
@@ -157,7 +160,16 @@ html, body {
     max-width: 100%;
     text-align: center;
   }
+
+  .water-quality-data {
+    padding: 15px;
+  }
+   .water-quality-data th, .water-quality-data td {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
+
 
 @media screen and (max-width: 480px) {
 
@@ -189,7 +201,7 @@ html, body {
 }
 
 
- /* Navbar */
+ /* Navbar CSS*/
 
  nav {
   width: 100%;
@@ -280,8 +292,6 @@ html, body {
  border-radius: 25px;
  }
  
- 
- /* PFAS Data display styling */
  .pfas-container {
   display: flex;
   align-items: center;
@@ -418,16 +428,6 @@ html, body {
  .map {
   height: 600px;
  }
-
- @media screen and (max-width: 768px) {
-  .water-quality-data {
-    padding: 15px;
-  }
-   .water-quality-data th, .water-quality-data td {
-    padding: 10px;
-    font-size: 14px;
-  }
- }
  
  .input-section {
   margin-bottom: 100px;
@@ -447,7 +447,6 @@ html, body {
   margin: 5px;
  }
  
- /* Style on hover and focus */
  .input-section select:hover,
  .input-section select:focus {
   background-color: #f0f0f0;
@@ -527,7 +526,6 @@ html, body {
   background-color: #ddd;
  }
  
- /* Styling for filter div*/
  .filter {
   display: flex;
   justify-content: space-between;
@@ -543,7 +541,6 @@ html, body {
   border-radius: 25px;
  }
  
- /* Styling for filter list */
  .filter-content {
   display: flex;
   flex-direction: column;
@@ -569,7 +566,6 @@ html, body {
  
  /* Resource page */
  
- /* Styling for blurb on resources page */
  #resources-info{
   margin-top: 50px;
   margin-left: 5.0em;
@@ -578,8 +574,7 @@ html, body {
   background-color: #982649;
   border-radius: 25px;
  }
- 
- /* Styling for filter div*/
+
  .filter {
   display: flex;
   justify-content: center; 
@@ -594,7 +589,6 @@ html, body {
   border-radius: 25px;
  }
  
- /* Styling for filter list */
  .filter-content {
   display: flex;
   flex-direction: column;
@@ -603,7 +597,6 @@ html, body {
   color:#000000;
  }
  
- /* Styling for filter descriptions */
  .filter-content {
   text-align: left;
  }
@@ -615,8 +608,7 @@ html, body {
  .filter ul li {
   text-align: left;
  }
- 
- /* Styling for filter images */
+
  .filter-image {
   max-height: 250px;
   max-width: 250px;

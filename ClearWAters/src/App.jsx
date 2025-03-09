@@ -1,16 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // Ensure correct imports
-import Homepage from './homepage';  // Import Homepage
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Homepage from './homepage';
 import Map from './Map';
 import Resources from './resources';
-
-{/*
-  this is a comment for firebase testing]
-  naother comment
-this is a comment for sophia
-  this is a comment for kelly!!!!
-  this is another comment for sophia
-*/}
 
 const App = () => {
   return (

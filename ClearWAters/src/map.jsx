@@ -54,7 +54,6 @@ const ResetButton = ({ onReset }) => {
 };
 
 const MapComponent = () => {
-    // Use the imported JSON data directly
     const [waterQualityData] = useState(map_data);
     const [mapCenter, setMapCenter] = useState(defaultCenter);
     const [zoomLevel, setZoomLevel] = useState(defaultZoom);
