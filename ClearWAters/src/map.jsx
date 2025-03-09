@@ -147,7 +147,7 @@ const MapComponent = () => {
         <div className='page_container'>
             <Navbar />
             <header>
-                <h1 className='page-title'>PFA Contamination Map</h1>
+                <h1 className='page-title'>County PFA Map</h1>
             </header>
 
             {/* MAP COMPONENT */}
@@ -215,7 +215,7 @@ const MapComponent = () => {
             {/* DATA TABLE OR NO DATA MESSAGE */}
             {hasSelectedCounty && (
                 <div className="water-quality-data">
-                    <h2>Water Quality Data</h2>
+                    <h2>PFA Level Data</h2>
                     {filteredData.length > 0 ? (
                         <>
                             <button onClick={handleExportCSV} className="export-button">

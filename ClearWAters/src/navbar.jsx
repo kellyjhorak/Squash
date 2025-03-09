@@ -38,7 +38,7 @@ export default function Navbar() {
         </ul>
       </nav>
       
-      <div> 
+      <div>
         <div id="mini-menu-bar">
             <Link to="/homepage" aria-label="Go to homepage">
                 <img id="mini-logo" src={exampleLogo} alt="Clearwaters logo" />
