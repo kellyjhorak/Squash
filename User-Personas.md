@@ -10,11 +10,7 @@
 - **Budget**: Limited (relies on financial aid and part-time income)  
 - **Tech Savviness**: High (frequent laptop and smartphone use)
 
-**Story**  
-Sam is excited to start his sophomore year at Gonzaga University but worries about tap water quality in the dorms. He’s heard about possible PFAS contamination in certain parts of Spokane. 
-With limited space (and money) for bulky or expensive filtration systems, Sam needs a budget-friendly filter that will fit in his dorm room. 
-After finding ClearWaters, he uses the **Search Bar** to look up Spokane County’s contamination data, then reviews the **Filtration Recommendations** to compare small pitcher filters, faucet attachments, or under-sink options. 
-Sam’s top priority is staying healthy on a student budget, so he’s grateful for ClearWaters’ affordable and easy-to-understand suggestions.
+Sam is preparing for his sophomore year at Gonzaga University, but is concerned about the quality of tap water in the dorms. He has heard reports of potential PFAS contamination in parts of Spokane and wants to ensure he’s drinking safe, clean water. When he tried researching the contaminants that were found in the water, he struggled to find a comprehensive website that listed contaminants, and described their respective health risks. Sam needs a reliable way to check local water quality and find an affordable, space-efficient filtration solution. Without prior knowledge of water contaminants or filtration options, he is looking for clear, easy-to-understand guidance on what products will keep him safe from the specified chemicals that have been detected in Gonzaga’s nearby water systems.
 
 ---
 
@@ -27,13 +23,7 @@ Sam’s top priority is staying healthy on a student budget, so he’s grateful 
 - **Tech Savviness**: Moderate (frequent app and web usage)  
 - **Key Concern**: Personal health & convenience
 
-**Story**  
-Marissa is settling into Washington State after a cross-country move. While researching neighborhoods in Bellevue, she discovers that water quality can vary by county and municipality. 
-Worried about contaminants that could affect her health, she comes across ClearWaters. 
-Using the **Search Bar**, she looks up **“King County”** to find detailed data on PFAS, lead, and other common contaminants. 
-She appreciates the site’s **Resources** and **video**, which help her learn more about local regulations. 
-Armed with this information, Marissa feels confident exploring different under-sink or whole-house filtration options for her new home. 
-Her priority is ensuring a safe and healthy living environment as she transitions into her new life in Washington.
+Marissa is settling into Washington State after a cross-country move and wants to ensure her new home has clean water. While researching neighborhoods in Bellevue, she discovers that water quality can vary significantly by county. Concerned about potential contaminants like PFAS, she realizes she needs reliable, local water quality data to make informed decisions. Without prior experience dealing with water filtration, she is looking for clear information about contamination risks. Having access to detailed data and educational resources will help her feel confident in choosing the right filtration system for her new living environment.
 
 ---
 
@@ -46,9 +36,4 @@ Her priority is ensuring a safe and healthy living environment as she transition
 - **Income**: Fixed retirement budget  
 - **Tech Savviness**: Low to moderate (comfortable with basic online research)
 
-**Story**  
-David recently purchased a small home in rural Eastern Washington to enjoy his retirement. His water comes from a private well, raising concerns about potential contaminants like nitrates and PFAS.
-Unsure where to start, he turns to ClearWaters.
-By exploring the **Interactive Map**, David checks local county data and learns his area has had occasional issues with well-water contamination. 
-He then consults the **Filtration Recommendations** to discover which systems are best for private wells—particularly carbon-based filtration or reverse osmosis. 
-With ClearWaters’ easy-to-understand resources, David feels more confident choosing an option that fits his budget and keeps his drinking water safe.
+David recently purchased a small home in rural Eastern Washington to enjoy his retirement. His water comes from a private well, which raises concerns about PFAS. Unlike city water systems, well water isn’t regularly tested, leaving him uncertain about its safety. With little experience in water filtration, David needs reliable information to understand potential risks and determine the best way to protect his drinking water. He wants to check contamination trends in his area and compare filtration options specifically designed for well water, such as carbon-based filters or reverse osmosis systems. Finding clear, easy-to-understand guidance will help him choose an effective solution that fits his budget and gives him peace of mind.
