@@ -114,14 +114,11 @@ const MapComponent = () => {
         setPopupCounty(null);
     };
 
-    // Simple CSV conversion function
     const convertToCSV = (data) => {
         if (!data || !data.length) return '';
         const keys = Object.keys(data[0]);
         const csvRows = [];
-        // Header row
         csvRows.push(keys.join(','));
-        // Data rows
         data.forEach(row => {
             csvRows.push(keys.map(key => `"${row[key]}"`).join(','));
         });
@@ -149,29 +146,7 @@ const MapComponent = () => {
                 <h1 className='page-title'>County PFA Map</h1>
             </header>
 
-            {/* MAP COMPONENT */}
-            <div className="map-container">
-                <MapContainer center={mapCenter} zoom={zoomLevel} className="map">
-                    <MapUpdater center={mapCenter} zoom={zoomLevel} />
-                    <TileLayer
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    />
-                    {Object.entries(counties).map(([county, coords]) => (
-                        <Marker
-                            key={county}
-                            position={coords}
-                            icon={dropletIcon}
-                            eventHandlers={{ click: () => handleMarkerClick(county, coords) }}
-                        >
-                            <Popup>{county} County</Popup>
-                        </Marker>
-                    ))}
-                    <ResetButton onReset={handleReset} />
-                </MapContainer>
-            </div>
-
-            {/* FILTERS MOVED BELOW THE MAP */}
+         {/* FILTERS*/}
             <div className="input-section">
                 <select value={selectedCounty} onChange={handleCountyChange}>
                     <option value="">Select a County</option>
@@ -211,6 +186,28 @@ const MapComponent = () => {
                 )}
             </div>
 
+            {/* MAP COMPONENT */}
+            <div className="map-container">
+                <MapContainer center={mapCenter} zoom={zoomLevel} className="map">
+                    <MapUpdater center={mapCenter} zoom={zoomLevel} />
+                    <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    {Object.entries(counties).map(([county, coords]) => (
+                        <Marker
+                            key={county}
+                            position={coords}
+                            icon={dropletIcon}
+                            eventHandlers={{ click: () => handleMarkerClick(county, coords) }}
+                        >
+                            <Popup>{county} County</Popup>
+                        </Marker>
+                    ))}
+                    <ResetButton onReset={handleReset} />
+                </MapContainer>
+            </div>
+
             {/* DATA TABLE OR NO DATA MESSAGE */}
             {hasSelectedCounty && (
                 <div className="water-quality-data">
@@ -218,9 +215,10 @@ const MapComponent = () => {
                     {filteredData.length > 0 ? (
                         <>
                             <button onClick={handleExportCSV} className="export-button">
-                                Export Data to CSV
+                                Downlaod Data CSV
                             </button>
-                            <table>
+                            <p id="data-message">Please download the CSV to see your results!</p>
+                            <table id="data-table">
                                 <thead>
                                     <tr>
                                         <th>Water System</th>

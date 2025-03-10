@@ -40,6 +40,10 @@ html, body {
   overflow-x: hidden;
   padding-bottom: 50px;
 }
+
+#data-message {
+  display: none;
+}
  
 /* Media Queries */
 
@@ -127,6 +131,10 @@ html, body {
     background-color: #71A2B6;
     padding-bottom: 50px;
   }
+
+  #data-message {
+    display: none;
+  }
 }
 
 
@@ -168,6 +176,10 @@ html, body {
     padding: 10px;
     font-size: 14px;
   }
+
+  #data-message {
+    display: none;
+  }
 }
 
 
@@ -197,6 +209,15 @@ html, body {
   #county-select {
     width: 90%;
     font-size: 1em;
+  }
+
+  #data-table {
+    display: none;
+  }
+
+  #data-message {
+    display: block;
+    font-size: 25px;
   }
 }
 
@@ -430,6 +451,7 @@ html, body {
  }
  
  .input-section {
+  margin-top: 50px;
   margin-bottom: 100px;
   text-align: center;
  }
