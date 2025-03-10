@@ -28,7 +28,11 @@ Allows users to select one of five WA state counties to retrieve specific PFAs t
 - Data formatting errors occur.
 
 **Workaround for present bug:**
-- ???
+- If incorrect or no data is displayed, instruct the user to refresh the page and reselect the county from the dropdown; this triggers a new data request.
+- If the response time exceeds 5 seconds, advise the user to check their network connection and wait a few extra seconds before retrying, as this may resolve temporary delays.
+- If data formatting errors occur, recommend clearing the browser cache or switching to an alternative browser, while offering a simplified text view if available to bypass compatibility issues.
+
+
 
 ---
 
@@ -62,7 +66,10 @@ Allows users to see a map of WA state with markers of five different counties. U
 - The map is unresponsive or crashes.
 
 **Workaround for present bug:**
-- ???
+- If the map fails to zoom when a county marker is clicked, instruct the user to select the desired county from the filter dropdown below the map; this alternative action should prompt the correct zoom functionality.
+- If no data is displayed after selecting a county, reapply the county filter or use a manual refresh button, which may help load the correct dataset.
+- If the filter options are unresponsive, recommend clearing the browser cache and using the “reset filters” button to reinitialize the data display, ensuring updated information.
+- If the map becomes unresponsive or crashes, suggest trying an alternative browser or device and ensuring the current browser is updated, as this can resolve compatibility and performance issues.
 
 ---
 
