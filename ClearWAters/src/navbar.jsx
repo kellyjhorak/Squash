@@ -23,7 +23,7 @@ export default function Navbar() {
         <ul>
           <li id='logo'>
             <Link to="/homepage" aria-label="Go to homepage">
-            <img src={exampleLogo} alt="Clearwaters logo" />
+            <img src={exampleLogo} alt="Clearwaters logo" aria-label='logo button to take you back to homepage' />
             </Link>
           </li>
           <li id='home-link'>
@@ -40,10 +40,11 @@ export default function Navbar() {
       
       <div>
         <div id="mini-menu-bar">
-            <Link to="/homepage" aria-label="Go to homepage">
+            <Link to="/homepage" aria-label="Go to homepage button">
                 <img id="mini-logo" src={exampleLogo} alt="Clearwaters logo" />
             </Link>
             <img id="hamburger-button"
+              aria-label='button that opens and closes dropdown menu'
               className={isMenuVisible ? 'hidden' : ''}
               src={hamburger}
               alt="hamburger menu icon"

@@ -22,6 +22,7 @@ const Resources = () => {
         <div className='video-container'>
           <div id='video-sep'></div>
           <iframe 
+            aria-label='video talking about common water filtration types to combat PFAS'
             width="560" 
             height="315" 
             src="https://www.youtube.com/embed/cX7kkk703sw" 

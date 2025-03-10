@@ -148,7 +148,7 @@ const MapComponent = () => {
 
          {/* FILTERS*/}
             <div className="input-section">
-                <select value={selectedCounty} onChange={handleCountyChange}>
+                <select aria-label='select county dropdown' value={selectedCounty} onChange={handleCountyChange}>
                     <option value="">Select a County</option>
                     {Object.keys(counties).map((county) => (
                         <option key={county} value={county}>
@@ -158,7 +158,7 @@ const MapComponent = () => {
                 </select>
 
                 {selectedCounty && (
-                    <select value={selectedWaterSystem} onChange={(e) => setSelectedWaterSystem(e.target.value)}>
+                    <select aria-label='select water system dropdown' value={selectedWaterSystem} onChange={(e) => setSelectedWaterSystem(e.target.value)}>
                         <option value="">Select Water System</option>
                         {[...new Set(waterQualityData
                             .filter(entry => entry.County === selectedCounty)
@@ -172,7 +172,7 @@ const MapComponent = () => {
                 )}
 
                 {selectedCounty && (
-                    <select value={selectedPFAS} onChange={(e) => setSelectedPFAS(e.target.value)}>
+                    <select aria-label='select PFA dropdown' value={selectedPFAS} onChange={(e) => setSelectedPFAS(e.target.value)}>
                         <option value="">Select PFAS Type</option>
                         {[...new Set(waterQualityData
                             .filter(entry => entry.County === selectedCounty)
@@ -188,8 +188,8 @@ const MapComponent = () => {
 
             {/* MAP COMPONENT */}
             <div className="map-container">
-                <MapContainer center={mapCenter} zoom={zoomLevel} className="map">
-                    <MapUpdater center={mapCenter} zoom={zoomLevel} />
+                <MapContainer aria-label='intereactive map displaying counties with water data' center={mapCenter} zoom={zoomLevel} className="map">
+                    <MapUpdater aria-label='zoom buttons' center={mapCenter} zoom={zoomLevel} />
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -204,7 +204,7 @@ const MapComponent = () => {
                             <Popup>{county} County</Popup>
                         </Marker>
                     ))}
-                    <ResetButton onReset={handleReset} />
+                    <ResetButton aria-label='reset map to origin button' onReset={handleReset} />
                 </MapContainer>
             </div>
 
@@ -214,7 +214,7 @@ const MapComponent = () => {
                     <h2>PFA Level Data</h2>
                     {filteredData.length > 0 ? (
                         <>
-                            <button onClick={handleExportCSV} className="export-button">
+                            <button aria-label='csv download button' onClick={handleExportCSV} className="export-button">
                                 Downlaod Data CSV
                             </button>
                             <p id="data-message">Please download the CSV to see your results!</p>

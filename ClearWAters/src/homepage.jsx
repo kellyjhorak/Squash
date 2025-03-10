@@ -72,7 +72,7 @@ const PfasData = ({ countyInput, onBack }) => {
   return (
     <div id="tooltip-container" style={{ position: 'relative' }}>
       <header>
-        <button onClick={onBack} className="back-button">Back</button>
+        <button aria-label='go back to county search' onClick={onBack} className="back-button">Back</button>
       </header>
       <main>
         <div className="container">
@@ -146,7 +146,7 @@ export default function Homepage() {
       <main>
         {!showData ? (
           <div className="input-section">
-            <select id="county-select" value={countyInput} onChange={handleSelectChange}>
+            <select id="county-select" aria-label='dropdown to choose county'value={countyInput} onChange={handleSelectChange}>
               <option value="">Select a County</option>
               {counties.map(county => (
                 <option key={county} value={county}>
@@ -154,7 +154,7 @@ export default function Homepage() {
                 </option>
               ))}
             </select>
-            <button id="go-button" onClick={handleSearch}>GO</button>
+            <button id="go-button" aria-label='search county button'onClick={handleSearch}>GO</button>
           </div>
         ) : (
           <PfasData countyInput={countyInput} onBack={handleBack} />
