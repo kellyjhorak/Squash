@@ -201,8 +201,8 @@ html, body {
   }
 
   .small-circle {
-    width: 60px;
-    height: 60px;
+    width: 50px !important;
+    height: 50px !important;
     font-size: 14px;
   }
 
