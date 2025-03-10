@@ -22,3 +22,6 @@ Built with:
 - Express.js
 - Firebase
 - HTML, CSS, JavaScript
+
+## Pair Programming Note
+Sophia Mangrubang and Kelly Horak engaged in pair programming throughout the project, frequently pushing changes from Kelly's computer. As a result, the number of commits on Sophia's account is significantly lower than her actual contributions.
