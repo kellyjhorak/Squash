@@ -207,8 +207,8 @@ html, body {
   }
 
   #county-select {
-    width: 90%;
-    font-size: 1em;
+    width: 60%;
+    font-size: 20px;
   }
 
   #data-table {
@@ -322,13 +322,11 @@ html, body {
  }
  
  .big-circle {
-  width: 200px !important;
-  height: 200px !important;
+  width: 200px;
+  height: 200px;
   margin: 50px;
   min-width: 200px;
   min-height: 200px;
-  max-width: 200px;
-  max-height: 200px;
   border-radius: 50%;
   background-color: #982649;
   color: #fff;
@@ -373,6 +371,7 @@ html, body {
  
  .small-circle:hover {
   background-color: #982649; 
+  color: white;
   transition: background-color 0.3s ease; 
  }
  
@@ -407,19 +406,6 @@ html, body {
   padding-left: 25px;
   padding-right: 25px;
   margin-right: 15px;
- }
- 
- #county-select {
-  font-size: 1.5em;
-  color: black;
-  font-display: center;
-  padding: 15px;
-  width: 600px;
-  height: 60px;
-  border-radius: 8px;
-  border: 2px solid #333;
-  background-color: #fff;
-  margin-top: 20px;
  }
  
  .main-container {

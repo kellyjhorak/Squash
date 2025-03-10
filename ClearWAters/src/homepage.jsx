@@ -75,7 +75,7 @@ const PfasData = ({ countyInput, onBack }) => {
         <button aria-label='go back to county search' onClick={onBack} className="back-button">Back</button>
       </header>
       <main>
-        <div className="container">
+        <div className="bubble-container">
           <div className="pfas-container">
             <div className="big-circle">
               <span className="big-number">{mostRecentData.length}</span>
