@@ -215,7 +215,7 @@ const MapComponent = () => {
                     {filteredData.length > 0 ? (
                         <>
                             <button aria-label='csv download button' onClick={handleExportCSV} className="export-button">
-                                Downlaod Data CSV
+                                Download Data CSV
                             </button>
                             <p id="data-message">Please download the CSV to see your results!</p>
                             <table id="data-table">
